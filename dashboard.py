@@ -34,8 +34,15 @@ def load_full_config(file_path):
         lines = f.read().replace('\n', ',').split(',')
     
     stock_info = {} 
-    MACRO_LIST = ["DX-Y.NYB", "USDVND=X", "^GSPC", "^N225", "GC=F", "CL=F"]
-    FRIENDLY = {"DX-Y.NYB": "DXY", "USDVND=X": "USD/VND", "GC=F": "VÀNG", "CL=F": "DẦU WTI", "^GSPC": "S&P 500"}
+    
+    # Đã bổ sung HRC, Quặng sắt và các loại hàng hóa khác
+    MACRO_LIST = ["DX-Y.NYB", "USDVND=X", "^GSPC", "^N225", "GC=F", "CL=F", "BZ=F", "NG=F", "HG=F", "HRC=F", "TIO=F"]
+    FRIENDLY = {
+        "DX-Y.NYB": "DXY", "USDVND=X": "USD/VND", "GC=F": "VÀNG", 
+        "CL=F": "DẦU WTI", "BZ=F": "DẦU BRENT", "NG=F": "KHÍ TỰ NHIÊN", 
+        "HG=F": "ĐỒNG", "HRC=F": "THÉP HRC", "TIO=F": "QUẶNG SẮT", 
+        "^GSPC": "S&P 500", "^N225": "NIKKEI 225"
+    }
 
     for item in lines:
         if not item.strip(): continue
