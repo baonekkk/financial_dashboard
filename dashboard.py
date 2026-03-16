@@ -20,7 +20,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.markdown("<h1 style='text-align: center;'>VN100 & Macro Dashboard</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>Financial Dashboard</h1>", unsafe_allow_html=True)
 
 # --- HÀM ĐỌC DANH SÁCH MÃ TỪ FILE TXT ---
 def load_symbols_from_txt(file_path):
@@ -71,7 +71,7 @@ with col_nav2:
 st.markdown("<hr style='width: 100%; margin: 10px auto;'>", unsafe_allow_html=True)
 
 # --- TẢI DỮ LIỆU ĐA LUỒNG ---
-@st.cache_data(ttl=3600)
+@st.cache_data(ttl=600)
 def load_all_data_concurrently(symbol_list):
     results = {}
     # Tăng workers lên 20 để tải 100+ mã nhanh nhất
