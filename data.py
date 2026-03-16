@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 
 # --- API SUPABASE ĐÃ DÁN TRỰC TIẾP ---
 SUPABASE_URL = "https://csgmhgvrycnckzbixdzs.supabase.co"
-SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNzZ21oZ3ZyeWNuY2t6Yml4ZHpzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM2NDQ0ODcsImV4cCI6MjA4OTIyMDQ4N30.qLL8nfOCIx9ba-Tdpr7mJ3R3CNamb0k11dm8DTGw24w"
+SUPABASE_KEY = "sb_secret_Y7-wh6RMl-UsWx7COUzbIw_taVMFfny"
 
 # Khởi tạo client trực tiếp từ chuỗi ký tự trên
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
