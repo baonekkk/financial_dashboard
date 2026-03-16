@@ -1,12 +1,25 @@
 import streamlit as st
 from streamlit_lightweight_charts import renderLightweightCharts
+import pandas as pd
+import indicators as ind_calc # Import file tính toán mới
 
 @st.dialog("Chi tiết biểu đồ", width="large")
 def zoom_chart(df, symbol, color, title_markdown):
     # Sử dụng chính xác tiêu đề được truyền từ widget vào
     st.markdown(title_markdown, unsafe_allow_html=True)
     
-    # Sử dụng chức năng của Streamlit để tạo thanh chọn khoảng thời gian (cắt dữ liệu tĩnh, không gọi API)
+    # Thêm lựa chọn nhiều chỉ số kỹ thuật hơn
+    indicators = st.multiselect(
+        "Thêm chỉ số kỹ thuật",
+        options=["MA20", "MA50", "EMA20", "EMA50", "Bollinger Bands", "RSI (14)", "Volume"],
+        default=["Volume"],
+        key=f"ind_{symbol}"
+    )
+    
+    # --- TÍNH TOÁN CÁC CHỈ SỐ BẰNG FILE INDICATORS.PY ---
+    df = ind_calc.calculate_indicators(df, indicators)
+    
+    # Sử dụng chức năng của Streamlit để tạo thanh chọn khoảng thời gian
     timeframe = st.radio(
         "Khoảng thời gian", 
         ["1 Tháng", "3 Tháng", "6 Tháng", "1 Năm", "Tất cả"], 
@@ -15,7 +28,7 @@ def zoom_chart(df, symbol, color, title_markdown):
         key=f"tf_{symbol}"
     )
     
-    # Dùng Pandas cắt dữ liệu dựa trên lựa chọn (Mặc định 1 tháng ~ 22 ngày giao dịch)
+    # Dùng Pandas cắt dữ liệu dựa trên lựa chọn
     if timeframe == "1 Tháng":
         plot_df = df.tail(22)
     elif timeframe == "3 Tháng":
@@ -27,7 +40,7 @@ def zoom_chart(df, symbol, color, title_markdown):
     else:
         plot_df = df
     
-    # Xử lý dữ liệu đã lọc cho biểu đồ nến (Ép kiểu int cho thời gian)
+    # Xử lý dữ liệu đã lọc cho biểu đồ nến
     full_data_list = []
     for _, row in plot_df.iterrows():
         full_data_list.append({
@@ -38,8 +51,9 @@ def zoom_chart(df, symbol, color, title_markdown):
             "close": float(row['close'])
         })
     
+    # --- CẤU HÌNH THANG ĐO CHO BIỂU ĐỒ ---
     zoom_options = {
-        "height": 410, 
+        "height": 450, 
         "layout": {
             "background": {"type": "solid", "color": "transparent"}, 
             "textColor": "#808080"
@@ -51,9 +65,20 @@ def zoom_chart(df, symbol, color, title_markdown):
         "timeScale": {
             "borderVisible": False,
         },
+        "rightPriceScale": {
+            "scaleMargins": {
+                "top": 0.1,
+                "bottom": 0.08 if "Volume" in indicators else 0.1, # Nới rộng không gian cho nến chính
+            }
+        },
+        "leftPriceScale": {
+            "visible": True if "RSI (14)" in indicators else False, 
+            "borderColor": "rgba(128, 128, 128, 0.2)",
+        }
     }
     
-    series_candle = [{
+    # Khởi tạo mảng series với biểu đồ nến làm gốc
+    series_list = [{
         "type": 'Candlestick', 
         "data": full_data_list, 
         "options": {
@@ -65,8 +90,62 @@ def zoom_chart(df, symbol, color, title_markdown):
         }
     }]
     
+    # --- THÊM CÁC SERIES CHỈ SỐ VÀO BIỂU ĐỒ ---
+    if "Volume" in indicators:
+        vol_data = []
+        for _, row in plot_df.iterrows():
+            v_color = "rgba(38, 166, 154, 0.4)" if row['close'] >= row['open'] else "rgba(239, 83, 80, 0.4)"
+            vol_data.append({"time": int(row['time']), "value": float(row['volume']), "color": v_color})
+        
+        series_list.append({
+            "type": 'Histogram',
+            "data": vol_data,
+            "options": {
+                "priceFormat": {"type": 'volume'},
+                "priceScaleId": "", 
+                "scaleMargins": {"top": 0.95, "bottom": 0}, # Ép Volume cực nhỏ (chỉ chiếm 5% chiều cao)
+                "baseLineVisible": False, # Tắt vạch số 0
+            }
+        })
+
+    if "MA20" in indicators:
+        ma20_data = [{"time": int(row['time']), "value": float(row['MA20'])} for _, row in plot_df.dropna(subset=['MA20']).iterrows()]
+        series_list.append({"type": 'Line', "data": ma20_data, "options": {"color": "#ffeb3b", "lineWidth": 1.5, "title": "MA20"}})
+
+    if "MA50" in indicators:
+        ma50_data = [{"time": int(row['time']), "value": float(row['MA50'])} for _, row in plot_df.dropna(subset=['MA50']).iterrows()]
+        series_list.append({"type": 'Line', "data": ma50_data, "options": {"color": "#e91e63", "lineWidth": 1.5, "title": "MA50"}})
+
+    if "EMA20" in indicators:
+        ema20_data = [{"time": int(row['time']), "value": float(row['EMA20'])} for _, row in plot_df.dropna(subset=['EMA20']).iterrows()]
+        series_list.append({"type": 'Line', "data": ema20_data, "options": {"color": "#29b6f6", "lineWidth": 1.5, "title": "EMA20"}})
+
+    if "EMA50" in indicators:
+        ema50_data = [{"time": int(row['time']), "value": float(row['EMA50'])} for _, row in plot_df.dropna(subset=['EMA50']).iterrows()]
+        series_list.append({"type": 'Line', "data": ema50_data, "options": {"color": "#ab47bc", "lineWidth": 1.5, "title": "EMA50"}})
+
+    if "Bollinger Bands" in indicators:
+        upper_data = [{"time": int(row['time']), "value": float(row['BB_UPPER'])} for _, row in plot_df.dropna(subset=['BB_UPPER']).iterrows()]
+        lower_data = [{"time": int(row['time']), "value": float(row['BB_LOWER'])} for _, row in plot_df.dropna(subset=['BB_LOWER']).iterrows()]
+        
+        series_list.append({"type": 'Line', "data": upper_data, "options": {"color": "rgba(255, 255, 255, 0.3)", "lineWidth": 1, "lineStyle": 2, "title": "Upper"}})
+        series_list.append({"type": 'Line', "data": lower_data, "options": {"color": "rgba(255, 255, 255, 0.3)", "lineWidth": 1, "lineStyle": 2, "title": "Lower"}})
+
+    if "RSI (14)" in indicators:
+        rsi_data = [{"time": int(row['time']), "value": float(row['RSI'])} for _, row in plot_df.dropna(subset=['RSI']).iterrows()]
+        series_list.append({
+            "type": 'Line', 
+            "data": rsi_data, 
+            "options": {
+                "color": "#ff9800", 
+                "lineWidth": 1.5, 
+                "title": "RSI(14)",
+                "priceScaleId": "left" 
+            }
+        })
+    
     renderLightweightCharts(
-        charts=[{"chart": zoom_options, "series": series_candle}],
+        charts=[{"chart": zoom_options, "series": series_list}],
         key=f"zoom_{symbol}"
     )
 
