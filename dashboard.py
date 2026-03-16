@@ -5,9 +5,13 @@ import widget
 import os
 
 # 1. Cấu hình trang
-st.set_page_config(layout="wide")
+st.set_page_config(layout="wide", page_title="Financial Dashboard")
 
-# 2. CSS (Giữ nguyên cấu trúc cũ)
+# 2. Khởi tạo Session State cho tính năng Load More
+if 'display_limit' not in st.session_state:
+    st.session_state.display_limit = 12
+
+# 3. CSS fix giao diện để các ô cân đối
 st.markdown("""
     <style>
         div[data-testid="stVerticalBlockBorderWrapper"] {
@@ -20,87 +24,121 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.markdown("<h1 style='text-align: center;'>Financial Dashboard</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>Thị Trường Tài Chính VN</h1>", unsafe_allow_html=True)
 
-# --- HÀM ĐỌC DANH SÁCH MÃ TỪ FILE TXT ---
-def load_symbols_from_txt(file_path):
+# --- HÀM ĐỌC MÃ TỪ FILE ---
+def load_full_config(file_path):
     if not os.path.exists(file_path):
-        st.error(f"Không tìm thấy file {file_path}")
         return {}
-    
-    # Danh sách các mã vĩ mô/quốc tế cần giữ nguyên (không thêm .VN)
-    MACRO_SYMBOLS = ["DX-Y.NYB", "USDVND=X", "^GSPC", "^N225", "GC=F", "CL=F", "VNM"]
-    # Tên hiển thị thân thiện cho các mã vĩ mô
-    FRIENDLY_NAMES = {
-        "DX-Y.NYB": "Chỉ số DXY",
-        "USDVND=X": "Tỷ giá USD/VND",
-        "VNM": "VNM ETF (Proxy VN)",
-        "^GSPC": "S&P 500 (Mỹ)",
-        "^N225": "Nikkei 225 (Nhật)",
-        "GC=F": "GIÁ VÀNG",
-        "CL=F": "GIÁ DẦU WTI"
-    }
-    
     with open(file_path, 'r', encoding='utf-8') as f:
-        content = f.read().replace('\n', ',')
-        raw_list = [s.strip().upper() for s in content.split(',') if s.strip()]
-        
-    stock_dict = {}
-    for s in raw_list:
-        # Nếu là mã vĩ mô
-        if s in MACRO_SYMBOLS:
-            display_name = FRIENDLY_NAMES.get(s, s)
-            stock_dict[s] = (display_name, "#546e7a")
-        # Nếu là cổ phiếu Việt Nam
+        lines = f.read().replace('\n', ',').split(',')
+    
+    stock_info = {} 
+    MACRO_LIST = ["DX-Y.NYB", "USDVND=X", "^GSPC", "^N225", "GC=F", "CL=F"]
+    FRIENDLY = {"DX-Y.NYB": "DXY", "USDVND=X": "USD/VND", "GC=F": "VÀNG", "CL=F": "DẦU WTI", "^GSPC": "S&P 500"}
+
+    for item in lines:
+        if not item.strip(): continue
+        parts = item.split('|')
+        symbol_raw = parts[0].strip().upper()
+        sector = parts[1].strip() if len(parts) > 1 else "Khác"
+        category = parts[2].strip() if len(parts) > 2 else "VN100"
+
+        if symbol_raw in MACRO_LIST:
+            full_symbol = symbol_raw
+            display_name = FRIENDLY.get(symbol_raw, symbol_raw)
+            sector = "Vĩ mô"
+            category = "Vĩ mô"
         else:
-            stock_dict[f"{s}.VN"] = (s, "#2e7d32")
+            full_symbol = f"{symbol_raw}.VN"
+            display_name = symbol_raw
             
-    return stock_dict
+        stock_info[full_symbol] = {"name": display_name, "sector": sector, "category": category}
+    return stock_info
 
-# Tải danh sách từ file stocks.txt
-STOCKS = load_symbols_from_txt("stocks.txt")
-symbols = list(STOCKS.keys())
+STOCKS_INFO = load_full_config("stocks.txt")
 
-# --- THANH ĐIỀU KHIỂN ---
-col_nav1, col_nav2 = st.columns([1, 1])
+# --- THANH LỌC TRÊN DASHBOARD ---
+ALL_SECTORS = sorted(list(set(info['sector'] for info in STOCKS_INFO.values())))
+if "Vĩ mô" in ALL_SECTORS: ALL_SECTORS.remove("Vĩ mô")
+ALL_SECTORS = ["Tất cả", "Vĩ mô"] + ALL_SECTORS
+
+col_nav1, col_nav2 = st.columns(2)
 with col_nav1:
-    st.selectbox("Ngành", ["Tất cả ngành", "Vĩ mô", "Ngân hàng", "Bất động sản", "Thép"], index=0)
+    selected_sector = st.selectbox("Lọc theo Ngành", options=ALL_SECTORS)
 with col_nav2:
-    st.selectbox("Danh mục theo dõi", ["VN100 + Macro", "Ưu tiên"], index=0)
+    selected_category = st.selectbox("Danh mục hiển thị", options=["VN100", "VN30"])
 
-st.markdown("<hr style='width: 100%; margin: 10px auto;'>", unsafe_allow_html=True)
+# Reset lại số lượng hiển thị (về 12) nếu người dùng chọn bộ lọc khác
+if 'last_sector' not in st.session_state: st.session_state.last_sector = selected_sector
+if 'last_category' not in st.session_state: st.session_state.last_category = selected_category
+
+if selected_sector != st.session_state.last_sector or selected_category != st.session_state.last_category:
+    st.session_state.display_limit = 12
+    st.session_state.last_sector = selected_sector
+    st.session_state.last_category = selected_category
+
+st.markdown("<hr>", unsafe_allow_html=True)
 
 # --- TẢI DỮ LIỆU ĐA LUỒNG ---
-@st.cache_data(ttl=600)
-def load_all_data_concurrently(symbol_list):
+@st.cache_data(ttl=1800)
+def load_all_data(symbol_list):
     results = {}
-    # Tăng workers lên 20 để tải 100+ mã nhanh nhất
     with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
-        future_to_symbol = {executor.submit(data.get_stock_data, sym, period="max"): sym for sym in symbol_list}
+        future_to_symbol = {executor.submit(data.get_stock_data, sym): sym for sym in symbol_list}
         for future in concurrent.futures.as_completed(future_to_symbol):
             sym = future_to_symbol[future]
-            try:
-                df_res = future.result()
-                if df_res is not None and not df_res.empty:
-                    results[sym] = df_res
-            except Exception:
-                pass
+            df = future.result()
+            if df is not None and not df.empty:
+                results[sym] = df
     return results
 
-with st.spinner(f"Đang tải dữ liệu {len(symbols)} chỉ số & cổ phiếu..."):
-    valid_stock_data = load_all_data_concurrently(symbols)
+with st.spinner("Đang tải dữ liệu..."):
+    all_data = load_all_data(list(STOCKS_INFO.keys()))
 
-active_symbols = [s for s in symbols if s in valid_stock_data]
+# --- LOGIC LỌC DỮ LIỆU ---
+filtered_symbols = []
+for sym, info in STOCKS_INFO.items():
+    if sym not in all_data: continue
+    
+    match_cat = False
+    if selected_category == "VN100":
+        match_cat = True
+    elif selected_category == "VN30":
+        if "VN30" in info['category']: 
+            match_cat = True
 
-# --- HIỂN THỊ LƯỚI ---
-for i in range(0, len(active_symbols), 3):
-    cols = st.columns(3)
-    for j in range(3):
-        if i + j < len(active_symbols):
-            symbol_key = active_symbols[i + j]
-            display_name = STOCKS[symbol_key][0]
-            df = valid_stock_data[symbol_key]
-            
-            with cols[j]:
-                with st.container(border=True):
-                    widget.create_stock_widget(df, display_name)
+    match_sector = (selected_sector == "Tất cả") or (info['sector'] == selected_sector)
+    
+    if info['sector'] == "Vĩ mô" and selected_sector == "Vĩ mô":
+        match_cat = True
+
+    if match_cat and match_sector:
+        filtered_symbols.append(sym)
+
+# --- HIỂN THỊ LƯỚI 3 CỘT (CỘNG DỒN MƯỢT MÀ) ---
+if not filtered_symbols:
+    st.info("Không tìm thấy mã nào phù hợp với bộ lọc hiện tại.")
+else:
+    # Chỉ lấy danh sách mã theo giới hạn hiện tại
+    display_symbols = filtered_symbols[:st.session_state.display_limit]
+
+    for i in range(0, len(display_symbols), 3):
+        cols = st.columns(3)
+        for j in range(3):
+            if i + j < len(display_symbols):
+                sym_key = display_symbols[i + j]
+                display_name = STOCKS_INFO[sym_key]['name']
+                df_stock = all_data[sym_key]
+                with cols[j]:
+                    with st.container(border=True):
+                        widget.create_stock_widget(df_stock, display_name)
+
+    # Nút Hiển thị thêm (Chỉ hiện nếu vẫn còn mã chưa hiển thị hết)
+    if st.session_state.display_limit < len(filtered_symbols):
+        st.markdown("<br>", unsafe_allow_html=True)
+        cols_btn = st.columns([1, 2, 1]) # Ép nút vào giữa cho đẹp
+        with cols_btn[1]:
+            if st.button("👇 Tải thêm các mã khác", use_container_width=True):
+                st.session_state.display_limit += 12 # Tăng giới hạn lên 12 mã
+                st.rerun() # Load lại luồng chạy để hiển thị thêm
