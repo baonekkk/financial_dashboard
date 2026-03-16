@@ -6,8 +6,8 @@ from datetime import datetime, timedelta
 
 # Kết nối bảo mật từ Secrets
 try:
-    url: str = st.secrets["SUPABASE_URL"]
-    key: str = st.secrets["SUPABASE_KEY"]
+    url: str = st.secrets["https://csgmhgvrycnckzbixdzs.supabase.co"]
+    key: str = st.secrets["eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNzZ21oZ3ZyeWNuY2t6Yml4ZHpzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM2NDQ0ODcsImV4cCI6MjA4OTIyMDQ4N30.qLL8nfOCIx9ba-Tdpr7mJ3R3CNamb0k11dm8DTGw24w"]
     supabase: Client = create_client(url, key)
 except Exception:
     st.error("Lỗi: Chưa cấu hình Supabase Secrets!")
