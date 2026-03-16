@@ -4,66 +4,67 @@ from supabase import create_client, Client
 import streamlit as st
 from datetime import datetime, timedelta
 
-# Kết nối bảo mật từ Secrets
-try:
-    url: str = st.secrets["SUPABASE_URL"]
-    key: str = st.secrets["SUPABASE_KEY"]
-    supabase: Client = create_client(url, key)
-except Exception as e:
-    st.error(f"Chưa cấu hình Secrets: {e}")
+# --- API SUPABASE ĐÃ DÁN TRỰC TIẾP ---
+SUPABASE_URL = "https://csgmhgvrycnckzbixdzs.supabase.co"
+SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNzZ21oZ3ZyeWNuY2t6Yml4ZHpzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzM2NDQ0ODcsImV4cCI6MjA4OTIyMDQ4N30.qLL8nfOCIx9ba-Tdpr7mJ3R3CNamb0k11dm8DTGw24w"
+
+# Khởi tạo client trực tiếp từ chuỗi ký tự trên
+supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 def get_stock_data(symbol: str):
     table_name = "stock_prices"
-    df_final = pd.DataFrame()
-
+    
+    # 1. THỬ LẤY DỮ LIỆU HIỆN CÓ TRONG SUPABASE
     try:
-        # 1. THỬ LẤY DỮ LIỆU CUỐI CÙNG TRONG SUPABASE
-        response = supabase.table(table_name).select("time").eq("symbol", symbol).order("time", desc=True).limit(1).execute()
-        data_db = response.data
-
-        if not data_db:
-            # Nếu DB trống -> Tải mới hoàn toàn
-            df_new = yf.Ticker(symbol).history(period="max", interval="1d")
-        else:
-            last_ts = data_db[0]['time']
-            last_date = datetime.fromtimestamp(last_ts)
-            
-            # Nếu dữ liệu cũ hơn 12h mới tải thêm
-            if (datetime.now() - last_date) > timedelta(hours=12):
-                start_date = (last_date + timedelta(days=1)).strftime('%Y-%m-%d')
-                df_new = yf.Ticker(symbol).history(start=start_date, interval="1d")
-            else:
-                df_new = pd.DataFrame()
-
-        # 2. XỬ LÝ DỮ LIỆU MỚI TẢI VỀ
-        if not df_new.empty:
-            df_new = df_new.reset_index()
-            df_new = df_new.rename(columns={
-                'Date': 'time', 'Datetime': 'time', 'Open': 'open',
-                'High': 'high', 'Low': 'low', 'Close': 'close', 'Volume': 'volume'
-            })
-            df_new['time'] = pd.to_datetime(df_new['time'], utc=True).apply(lambda x: int(x.timestamp()))
-            df_new['symbol'] = symbol
-            
-            # Lưu vào DB
-            df_save = df_new[['symbol', 'time', 'open', 'high', 'low', 'close', 'volume']]
-            records = df_save.to_dict('records')
-            supabase.table(table_name).upsert(records).execute()
-
-        # 3. LUÔN TRẢ VỀ DỮ LIỆU TỪ DB ĐỂ HIỂN THỊ
-        res = supabase.table(table_name).select("*").eq("symbol", symbol).order("time", desc=False).execute()
-        df_final = pd.DataFrame(res.data)
-
-        # Nếu DB vẫn trống (do lỗi ghi), trả về chính df_new để biểu đồ vẫn hiện
-        if df_final.empty and not df_new.empty:
-            return df_new
-
+        # Lấy dữ liệu sắp xếp theo thời gian tăng dần
+        response = supabase.table(table_name).select("*").eq("symbol", symbol).order("time", desc=False).execute()
+        df_db = pd.DataFrame(response.data)
     except Exception as e:
-        # Nếu lỗi DB, tải trực tiếp từ Yahoo để không làm gián đoạn biểu đồ
-        df_fallback = yf.Ticker(symbol).history(period="1mo", interval="1d")
-        if not df_fallback.empty:
-            df_fallback = df_fallback.reset_index().rename(columns={'Date': 'time', 'Open': 'open', 'High': 'high', 'Low': 'low', 'Close': 'close', 'Volume': 'volume'})
-            df_fallback['time'] = pd.to_datetime(df_fallback['time'], utc=True).apply(lambda x: int(x.timestamp()))
-            return df_fallback
-            
-    return df_final
+        st.error(f"Lỗi kết nối Supabase: {e}")
+        df_db = pd.DataFrame()
+
+    # 2. KIỂM TRA XEM CÓ CẦN TẢI THÊM DỮ LIỆU TỪ YAHOO KHÔNG
+    df_new = pd.DataFrame()
+    
+    if df_db.empty:
+        # Nếu Database chưa có gì, tải 1 năm từ Yahoo
+        with st.spinner(f"Đang khởi tạo dữ liệu cho {symbol}..."):
+            df_new = yf.Ticker(symbol).history(period="1y", interval="1d")
+    else:
+        # Nếu đã có dữ liệu, kiểm tra ngày cuối cùng
+        last_ts = df_db['time'].max()
+        last_date = datetime.fromtimestamp(last_ts)
+        
+        # Nếu dữ liệu cũ hơn 1 ngày thì tải bù ngày mới
+        if (datetime.now() - last_date) > timedelta(days=1):
+            start_date = (last_date + timedelta(days=1)).strftime('%Y-%m-%d')
+            df_new = yf.Ticker(symbol).history(start=start_date, interval="1d")
+
+    # 3. NẾU CÓ DỮ LIỆU MỚI, LƯU VÀO SUPABASE VÀ CẬP NHẬT BIẾN HIỂN THỊ
+    if not df_new.empty:
+        df_new = df_new.reset_index().rename(columns={
+            'Date': 'time', 'Datetime': 'time', 'Open': 'open',
+            'High': 'high', 'Low': 'low', 'Close': 'close', 'Volume': 'volume'
+        })
+        # Chuyển thời gian sang Unix Timestamp (số nguyên)
+        df_new['time'] = pd.to_datetime(df_new['time'], utc=True).apply(lambda x: int(x.timestamp()))
+        df_new['symbol'] = symbol
+        
+        # Chỉ lấy các cột cần thiết để lưu vào bảng stock_prices
+        df_save = df_new[['symbol', 'time', 'open', 'high', 'low', 'close', 'volume']]
+        
+        try:
+            # Đẩy dữ liệu lên Supabase
+            supabase.table(table_name).upsert(df_save.to_dict('records')).execute()
+            # Gộp dữ liệu mới vào dữ liệu cũ để trả về hiển thị luôn
+            df_db = pd.concat([df_db, df_save], ignore_index=True).drop_duplicates(subset=['time'])
+        except Exception as e:
+            st.warning(f"Không thể lưu dữ liệu mới của {symbol} vào DB: {e}")
+            # Nếu lỗi DB thì vẫn trả về dữ liệu vừa tải để biểu đồ hiện được
+            if df_db.empty: return df_new
+
+    # 4. TRẢ VỀ DỮ LIỆU CUỐI CÙNG (Đã sắp xếp)
+    if df_db.empty:
+        return pd.DataFrame()
+        
+    return df_db.sort_values('time')
