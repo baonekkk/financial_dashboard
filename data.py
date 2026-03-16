@@ -10,7 +10,8 @@ if not os.path.exists(STORAGE_DIR):
 
 def get_stock_data(symbol: str, period: str = "max", interval: str = "1d"):
     """
-    Lấy dữ liệu với cơ chế lưu local và cập nhật ngày mới nhất.
+    Lấy dữ liệu với cơ chế lưu local (Parquet) và cập nhật ngày mới nhất.
+    Đã chuẩn hóa để luôn có đủ các cột: time, open, high, low, close, volume.
     """
     file_path = os.path.join(STORAGE_DIR, f"{symbol.replace('^', 'INDEX')}.parquet")
     
@@ -21,7 +22,7 @@ def get_stock_data(symbol: str, period: str = "max", interval: str = "1d"):
         df_old['time_dt'] = pd.to_datetime(df_old['time'], unit='s', utc=True)
         last_date = df_old['time_dt'].max()
         
-        # Nếu dữ liệu mới nhất chưa quá 1 ngày (tránh gọi API quá nhiều trong ngày)
+        # Nếu dữ liệu mới nhất chưa quá 12h (tránh gọi API quá nhiều trong ngày)
         if datetime.now(last_date.tzinfo) - last_date < timedelta(hours=12):
             return df_old.drop(columns=['time_dt'])
 
@@ -41,15 +42,24 @@ def get_stock_data(symbol: str, period: str = "max", interval: str = "1d"):
                 'Date': 'time', 'Datetime': 'time', 'Open': 'open',
                 'High': 'high', 'Low': 'low', 'Close': 'close', 'Volume': 'volume'
             })
+            
+            # Xử lý trường hợp thiếu cột volume (thường gặp ở các chỉ số)
+            if 'volume' not in df_new.columns:
+                df_new['volume'] = 0
+                
             df_new = df_new.dropna(subset=['close'])
             df_new['time'] = pd.to_datetime(df_new['time'], utc=True).apply(lambda x: int(x.timestamp()))
+            
+            # Chỉ giữ lại đúng các cột cần thiết trước khi gộp
+            cols_to_keep = ['time', 'open', 'high', 'low', 'close', 'volume']
+            df_new = df_new[[c for c in cols_to_keep if c in df_new.columns]]
             
             # 3. GỘP DỮ LIỆU
             df_combined = pd.concat([df_old.drop(columns=['time_dt']), df_new], ignore_index=True)
             # Xóa trùng lặp nếu có
             df_combined = df_combined.drop_duplicates(subset=['time'], keep='last').sort_values('time')
             
-            # Lưu lại file mới
+            # Lưu lại file mới đè lên file cũ
             df_combined.to_parquet(file_path)
             return df_combined
             
@@ -68,12 +78,16 @@ def get_stock_data(symbol: str, period: str = "max", interval: str = "1d"):
             'Date': 'time', 'Datetime': 'time', 'Open': 'open',
             'High': 'high', 'Low': 'low', 'Close': 'close', 'Volume': 'volume'
         })
+        
+        if 'volume' not in df.columns:
+            df['volume'] = 0
+            
         df = df.dropna(subset=['close'])
         df['time'] = pd.to_datetime(df['time'], utc=True).apply(lambda x: int(x.timestamp()))
         
         # Lưu lần đầu
-        cols_to_keep = [col for col in ['time', 'open', 'high', 'low', 'close', 'volume'] if col in df.columns]
-        df_save = df[cols_to_keep]
+        cols_to_keep = ['time', 'open', 'high', 'low', 'close', 'volume']
+        df_save = df[[col for col in cols_to_keep if col in df.columns]]
         df_save.to_parquet(file_path)
         
         return df_save
