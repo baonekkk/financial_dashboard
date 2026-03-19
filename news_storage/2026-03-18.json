@@ -1,0 +1,133 @@
+```json
+{
+    "market_summary": {
+        "overall_impact": "Thị trường toàn cầu đang chịu tác động mạnh mẽ từ sự leo thang căng thẳng giữa Iran và Israel, đặc biệt là các cuộc tấn công vào cơ sở năng lượng và hạ sát quan chức cấp cao, đẩy giá dầu tăng vọt và gây lo ngại về chuỗi cung ứng. Điều này cũng ảnh hưởng đến chính sách tiền tệ của các ngân hàng trung ương lớn như Fed. Tại Việt Nam, thị trường chứng khoán phản ứng với các tin tức doanh nghiệp lớn liên quan đến các vụ án tham nhũng (ACV, DGC, Mr Pips) và các động thái tái cấu trúc ngân hàng (Sacombank). Dòng vốn ngoại tiếp tục rút ròng, trong khi các nhóm ngành liên quan đến năng lượng và công nghệ có những diễn biến đáng chú ý.",
+        "sector_impact": "Ngành Dầu khí hưởng lợi từ giá dầu tăng cao. Ngành Ngân hàng có sự biến động về lãi suất huy động và các kế hoạch tái cấu trúc. Ngành Hóa chất (DGC) chịu áp lực lớn từ các vấn đề pháp lý. Ngành Hàng không (ACV) đối mặt với thách thức về quản trị. Ngành Công nghệ và Năng lượng tái tạo (xe điện) có tiềm năng tăng trưởng nhờ các khoản đầu tư lớn và xu hướng chuyển đổi số/năng lượng.",
+        "potential_sectors": "Dầu khí (do giá dầu tăng), Năng lượng tái tạo/Xe điện (nhờ đầu tư hạ tầng sạc và xu hướng chuyển dịch năng lượng), Công nghệ (đẩy mạnh chuyển đổi số và AI), Ngân hàng (các ngân hàng có nền tảng tốt và kế hoạch tăng vốn, tái cấu trúc hiệu quả)."
+    },
+    "world_news": [
+        {
+            "title": "Xung đột Iran-Israel leo thang, giá dầu và khí đốt tăng vọt",
+            "explanation": "Căng thẳng Trung Đông leo thang sau khi Israel tuyên bố hạ sát Bộ trưởng Tình báo Iran và Iran đáp trả bằng các cuộc tấn công, đe dọa các cơ sở năng lượng Vùng Vịnh và khả năng đóng cửa eo biển Hormuz. Điều này khiến giá dầu và khí đốt toàn cầu tăng mạnh, đồng thời gây lo ngại về chuỗi cung ứng năng lượng.",
+            "sources": [
+                "CafeF](https://cafef.vn/mo-khi-dot-lon-nhat-the-gioi-bi-israel-tap-kich-iran-tuyen-bo-tan-cong-tra-dua-loat-co-so-nang-luong-khap-vung-vinh-trong-vai-gio-toi-gia-dau-lai-tang-vot-188260319002904852.chn)",
+                "NYTimes](https://www.nytimes.com/live/2026/03/18/world/iran-war-news-trump-oil)"
+            ],
+            "general_sentiment": "Xấu",
+            "vn_market_impact": "Tích cực cho nhóm cổ phiếu dầu khí, nhưng tiêu cực cho các ngành phụ thuộc vào chi phí năng lượng nhập khẩu. Gây áp lực lạm phát và tỷ giá.",
+            "sector_impact": "Dầu khí, Vận tải biển, Hàng không, Sản xuất (chi phí đầu vào)",
+            "ticker_impact": "PLX, PVS, PVD, BSR"
+        },
+        {
+            "title": "Mỹ tạm gỡ 'luật hàng hải trăm năm' và Fed giữ nguyên lãi suất giữa bối cảnh chiến sự Iran",
+            "explanation": "Tổng thống Trump tạm thời gỡ bỏ 'luật hàng hải trăm năm' (Jones Act) để giảm tác động từ chiến sự Iran lên chi phí vận chuyển và giá xăng dầu. Cùng lúc, Cục Dự trữ Liên bang Mỹ (Fed) quyết định giữ nguyên lãi suất cơ bản, với lý do lo ngại về tác động của cuộc chiến Iran đến giá dầu và lạm phát toàn cầu.",
+            "sources": [
+                "VNExpress](https://vnexpress.net/ong-trump-tam-go-luat-hang-hai-tram-nam-de-giam-tac-dong-tu-chien-su-iran-5052121.html)",
+                "Yonhap](https://en.yna.co.kr/view/AEN20260319000400315)"
+            ],
+            "general_sentiment": "Trung lập",
+            "vn_market_impact": "Việc Fed giữ nguyên lãi suất có thể giảm áp lực lên tỷ giá USD/VND trong ngắn hạn. Quyết định của Trump có thể giúp ổn định giá xăng dầu toàn cầu, gián tiếp hỗ trợ chi phí vận tải và sản xuất tại Việt Nam.",
+            "sector_impact": "Ngân hàng, Vận tải, Sản xuất, Năng lượng",
+            "ticker_impact": "Không rõ ràng"
+        },
+        {
+            "title": "Ukraine triển khai chuyên gia quân sự tại Trung Đông, lo ngại thiếu tên lửa",
+            "explanation": "Ukraine đang triển khai hơn 200 chuyên gia quân sự ở Trung Đông để đối phó với UAV của Iran. Tổng thống Zelensky cũng bày tỏ lo ngại rằng chiến sự Trung Đông có thể khiến Ukraine thiếu tên lửa, do nguồn cung vũ khí toàn cầu bị phân tán.",
+            "sources": [
+                "VNExpress](https://vnexpress.net/ukraine-dang-trien-khai-hon-200-chuyen-gia-quan-su-o-trung-dong-5051847.html)",
+                "Dân Trí](https://dantri.com.vn/the-gioi/ukraine-cu-201-chuyen-gia-quan-su-doi-pho-uav-iran-o-vung-vinh-20260318202648430.htm)"
+            ],
+            "general_sentiment": "Xấu",
+            "vn_market_impact": "Không có tác động trực tiếp đáng kể đến thị trường Việt Nam, nhưng góp phần vào bức tranh địa chính trị toàn cầu bất ổn.",
+            "sector_impact": "Quốc phòng, An ninh",
+            "ticker_impact": "Không rõ ràng"
+        }
+    ],
+    "business_news": [
+        {
+            "title": "ACV bổ nhiệm quyền Chủ tịch HĐQT, vụ án tại ACV được Ban Chỉ đạo TW theo dõi",
+            "explanation": "Tổng công ty Cảng hàng không Việt Nam (ACV) đã bổ nhiệm quyền Chủ tịch Hội đồng quản trị sau khi ông Vũ Thế Phiệt bị bắt. Vụ án xảy ra tại ACV và các đơn vị liên quan đã được đưa vào diện Ban Chỉ đạo Trung ương về phòng, chống tham nhũng, tiêu cực theo dõi, chỉ đạo, cho thấy mức độ nghiêm trọng của vụ việc.",
+            "sources": [
+                "CafeF](https://cafef.vn/vu-an-xay-ra-tai-acv-va-cac-don-vi-lien-quan-vao-dien-ban-chi-dao-tw-theo-doi-188260318180122104.chn)",
+                "VNExpress](https://vnexpress.net/acv-bo-nhiem-quyen-chu-tich-hoi-dong-quan-tri-5052028.html)"
+            ],
+            "general_sentiment": "Xấu",
+            "vn_market_impact": "Tiêu cực đối với cổ phiếu ACV và các doanh nghiệp liên quan đến dự án sân bay Long Thành do lo ngại về sự ổn định quản trị và tiến độ dự án.",
+            "sector_impact": "Hàng không, Xây dựng hạ tầng",
+            "ticker_impact": "ACV"
+        },
+        {
+            "title": "Chủ tịch Hóa chất Đức Giang bị khởi tố, cổ phiếu DGC dư bán sàn",
+            "explanation": "Chủ tịch Tập đoàn Hóa chất Đức Giang (DGC) bị khởi tố, gây ra làn sóng bán tháo cổ phiếu DGC với lượng dư bán sàn lớn. Các công ty chứng khoán đánh giá quá trình gia hạn giấy phép khai thác khai trường 25 của DGC có thể bị ảnh hưởng, tạo ra rủi ro pháp lý và kinh doanh cho doanh nghiệp.",
+            "sources": [
+                "CafeF](https://cafef.vn/ctck-danh-gia-kich-ban-tai-hoa-chat-duc-giang-qua-trinh-gia-han-giay-phep-khai-thac-khai-truong-25-co-the-bi-anh-huong-188260318145626559.chn)",
+                "Dân Trí](https://dantri.com.vn/kinh-doanh/co-phieu-hoa-chat-duc-giang-du-ban-san-luong-lon-nhom-dau-khi-nong-20260318154542845.htm)"
+            ],
+            "general_sentiment": "Xấu",
+            "vn_market_impact": "Tiêu cực mạnh đối với cổ phiếu DGC và có thể lan sang các cổ phiếu ngành hóa chất khác do tâm lý lo ngại về rủi ro pháp lý.",
+            "sector_impact": "Hóa chất",
+            "ticker_impact": "DGC"
+        },
+        {
+            "title": "Shark Bình bị cáo buộc rửa tiền trong vụ án Mr Pips",
+            "explanation": "Ông Nguyễn Hòa Bình (Shark Bình) bị cáo buộc rửa tiền trong vụ án lừa đảo của 'Mr Pips' Phó Đức Nam. Theo điều tra, Shark Bình đã chỉ đạo cấp dưới lập ví giả và cung cấp thông tin giả cho công an để che giấu hành vi. Vụ án này cũng liên quan đến việc bố mẹ Mr Pips rút tiền mua vàng khi con trai bị bắt.",
+            "sources": [
+                "CafeF](https://cafef.vn/shark-binh-bi-cao-buoc-rua-tien-trong-vu-an-mr-pips-188260318145447166.chn)",
+                "Dân Trí](https://dantri.com.vn/kinh-doanh/cong-ty-mat-xich-cua-shark-binh-trong-cao-buoc-rua-tien-cho-mr-pips-20260318141736784.htm)"
+            ],
+            "general_sentiment": "Xấu",
+            "vn_market_impact": "Gây ảnh hưởng tiêu cực đến uy tín của các cá nhân và doanh nghiệp liên quan, đặc biệt trong lĩnh vực công nghệ và đầu tư tài chính. Có thể làm tăng sự thận trọng của nhà đầu tư đối với các dự án khởi nghiệp và nền tảng đầu tư.",
+            "sector_impact": "Công nghệ, Đầu tư tài chính, Khởi nghiệp",
+            "ticker_impact": "Không rõ ràng"
+        },
+        {
+            "title": "Sacombank đề xuất đổi tên, dời trụ sở và gia hạn tái cơ cấu đến 2030",
+            "explanation": "Sacombank (STB) đang trình cổ đông kế hoạch đổi tên thành SACOMBANK hoặc Ngân hàng Sài Gòn Tài Lộc, đồng thời xin gia hạn đề án tái cơ cấu đến năm 2030. Ngân hàng cũng có kế hoạch dời trụ sở, cho thấy những thay đổi lớn trong chiến lược và cơ cấu hoạt động.",
+            "sources": [
+                "CafeF](https://cafef.vn/sacombank-muon-doi-ten-thanh-sacombank-ngan-hang-sai-gon-tai-loc-gia-han-de-an-tai-co-cau-den-2030-188260318140032891.chn)",
+                "VNExpress](https://vnexpress.net/sacombank-muon-doi-ten-5051887.html)"
+            ],
+            "general_sentiment": "Trung lập",
+            "vn_market_impact": "Có thể tạo ra sự quan tâm đối với cổ phiếu STB do những thay đổi lớn trong chiến lược. Việc gia hạn tái cơ cấu có thể được nhìn nhận là cần thiết để đảm bảo sự ổn định dài hạn.",
+            "sector_impact": "Ngân hàng",
+            "ticker_impact": "STB"
+        },
+        {
+            "title": "Tỷ phú Phạm Nhật Vượng rót 10.000 tỷ xây 'siêu trạm sạc' VinFast",
+            "explanation": "Tỷ phú Phạm Nhật Vượng công bố kế hoạch đầu tư 10.000 tỷ đồng để xây dựng 99 'siêu trạm sạc' VinFast trên 34 tỉnh, thành, có khả năng phục vụ 100 ô tô điện cùng lúc. Động thái này nhằm chớp cơ hội trước tình hình giá xăng tăng cao và thúc đẩy phát triển xe điện tại Việt Nam.",
+            "sources": [
+                "CafeF](https://cafef.vn/ty-phu-pham-nhat-vuong-tung-10000-ty-xay-99-sieu-tram-sac-phuc-vu-100-o-to-dien-cung-luc-188260318071901408.chn)",
+                "VNExpress](https://vnexpress.net/gia-xang-tang-co-du-suc-kich-cau-xe-dien-5051984.html)"
+            ],
+            "general_sentiment": "Tốt",
+            "vn_market_impact": "Tích cực cho ngành xe điện và hạ tầng liên quan. Thúc đẩy xu hướng chuyển đổi năng lượng và có thể tạo ra hiệu ứng lan tỏa cho các doanh nghiệp khác trong hệ sinh thái VinGroup.",
+            "sector_impact": "Sản xuất ô tô, Năng lượng tái tạo, Hạ tầng giao thông",
+            "ticker_impact": "VIC, VFS (niêm yết quốc tế)"
+        },
+        {
+            "title": "FPT hợp tác chiến lược tại Nhật Bản, đẩy mạnh chuyển đổi số",
+            "explanation": "FPT đã ký kết hợp tác chiến lược với một tập đoàn tài chính hàng đầu tại Nhật Bản nhằm thúc đẩy chuyển đổi số. Đây là một bước đi lớn của FPT trong việc mở rộng thị trường quốc tế và khẳng định vị thế trong lĩnh vực công nghệ.",
+            "sources": [
+                "CafeF](https://cafef.vn/fpt-choi-lon-tai-nhat-ban-hop-tac-chien-luoc-voi-tap-doan-tai-chinh-hang-dau-thuc-day-chuyen-doi-so-188260318110827506.chn)",
+                "VNExpress](https://vnexpress.net/fpt-thay-doi-cach-hach-toan-ket-qua-kinh-doanh-fpt-telecom-5052022.html)"
+            ],
+            "general_sentiment": "Tốt",
+            "vn_market_impact": "Tích cực cho cổ phiếu FPT và ngành công nghệ thông tin Việt Nam, mở ra cơ hội tăng trưởng doanh thu và lợi nhuận từ thị trường nước ngoài.",
+            "sector_impact": "Công nghệ thông tin, Chuyển đổi số",
+            "ticker_impact": "FPT"
+        },
+        {
+            "title": "Giá vàng thế giới giảm mạnh, USD chợ đen tăng vọt",
+            "explanation": "Giá vàng thế giới bất ngờ giảm sâu xuống dưới 4.900 USD/ounce, trong khi tỷ giá USD trên thị trường chợ đen tại Việt Nam tăng vọt lên gần 27.400 đồng. Ngân hàng Nhà nước tiếp tục hút về lượng lớn VND để ổn định thị trường.",
+            "sources": [
+                "CafeF](https://cafef.vn/toi-ngay-18-3-gia-vang-bat-ngo-giam-sau-xuong-duoi-4900-usd-ounce-188260318201826202.chn)",
+                "Dân Trí](https://dantri.com.vn/kinh-doanh/gia-vang-the-gioi-lai-giam-manh-mat-moc-5000-usdounce-20260318114820749.htm)"
+            ],
+            "general_sentiment": "Xấu",
+            "vn_market_impact": "Giá vàng giảm có thể ảnh hưởng đến tâm lý nhà đầu tư vàng. Tỷ giá USD tăng gây áp lực lên các doanh nghiệp nhập khẩu và nợ nước ngoài, đồng thời có thể khiến Ngân hàng Nhà nước tiếp tục các biện pháp hút tiền để ổn định tỷ giá.",
+            "sector_impact": "Vàng, Ngoại hối, Ngân hàng, Xuất nhập khẩu",
+            "ticker_impact": "SJC (vàng), các ngân hàng"
+        }
+    ]
+}
+```{}

@@ -1,0 +1,109 @@
+```json
+{
+    "market_summary": {
+        "overall_impact": "Thị trường toàn cầu đang chịu áp lực lớn từ căng thẳng leo thang ở Trung Đông, đặc biệt là các cuộc tấn công của Iran vào cơ sở năng lượng và các mục tiêu khác, đẩy giá dầu tăng vọt và gây biến động tỷ giá hối đoái. Sự không chắc chắn về chính sách tiền tệ của Mỹ (đóng băng lãi suất) cũng góp phần vào tâm lý thận trọng. Các thị trường châu Á, bao gồm Hàn Quốc, chứng kiến chứng khoán giảm điểm và đồng nội tệ mất giá. Giá vàng thế giới giảm mạnh, kéo theo vàng trong nước. Tại Việt Nam, chính sách cắt giảm điều kiện kinh doanh mang lại tín hiệu tích cực, cùng với việc đẩy mạnh đầu tư công vào hạ tầng, nhưng thị trường vẫn đối mặt với áp lực tỷ giá và biến động giá vàng.",
+        "sector_impact": "Các ngành chịu tác động mạnh bao gồm: Năng lượng (dầu khí) tăng giá do lo ngại nguồn cung; Tài chính (ngân hàng, chứng khoán) chịu áp lực từ biến động tỷ giá và tâm lý thị trường; Vàng giảm giá mạnh. Ngành công nghệ tiếp tục phát triển mạnh mẽ ở Trung Quốc (robot, AI) và Hàn Quốc (6G, vật liệu pin). Ngành xây dựng và vật liệu xây dựng tại Việt Nam có triển vọng tích cực nhờ đẩy mạnh đầu tư hạ tầng.",
+        "potential_sectors": "Các ngành có tiềm năng bao gồm: Quốc phòng (do căng thẳng địa chính trị); Hạ tầng (các dự án trọng điểm ở Việt Nam được ưu tiên); Công nghệ cao/AI (tiếp tục là xu hướng đầu tư dài hạn); Năng lượng (khai thác mới và năng lượng thay thế có thể được quan tâm trong bối cảnh giá dầu tăng)."
+    },
+    "world_news": [
+        {
+            "title": "Căng thẳng Trung Đông leo thang: Iran tấn công cơ sở năng lượng, NATO bàn cách mở lại Hormuz",
+            "explanation": "Căng thẳng Trung Đông leo thang nghiêm trọng khi Iran thực hiện các cuộc tấn công tên lửa vào cơ sở khí LNG lớn nhất thế giới ở Qatar, các mục tiêu ở Israel (gây thiệt mạng cho dân thường) và Bờ Tây (gây thiệt mạng cho người Palestine). NATO đang thảo luận về việc mở lại eo biển Hormuz, một tuyến đường vận chuyển dầu mỏ quan trọng. Các cuộc tấn công này đã đẩy giá dầu tăng vọt, gây biến động mạnh trên thị trường tài chính toàn cầu, đặc biệt là tỷ giá hối đoái và thị trường chứng khoán châu Á. Tình báo Mỹ cho rằng Iran chưa khôi phục chương trình hạt nhân sau xung đột năm 2025, nhưng các hành động quân sự hiện tại vẫn gây ra rủi ro lớn. Qatar đã trục xuất các tùy viên Iran.",
+            "sources": [
+                "[VNExpress](https://vnexpress.net/iran-tap-kich-co-so-khi-lng-lon-nhat-the-gioi-o-qatar-5052167.html)",
+                "[VNExpress](https://vnexpress.net/vo-chong-gia-israel-thiet-mang-vi-ten-lua-mang-dau-dan-chum-iran-5052069.html)",
+                "[VNExpress](https://vnexpress.net/nato-ban-cach-mo-lai-eo-bien-hormuz-5052169.html)",
+                "[NYTimes](https://www.nytimes.com/live/2026/03/18/world/iran-war-news-trump-oil)",
+                "[NYTimes](https://www.nytimes.com/2026/03/18/world/middleeast/iran-west-bank-missile-strike.html)",
+                "[NYTimes](https://www.nytimes.com/2026/03/18/world/middleeast/iran-war-bombing-tel-aviv-deaths.html)",
+                "[Al Jazeera](https://www.aljazeera.com/news/liveblog/2026/3/19/iran-war-live-qatar-saudi-energy-sites-attacked-riyadh-says-trust-gone?traffic_source=rss)",
+                "[Al Jazeera](https://www.aljazeera.com/video/newsfeed/2026/3/19/qatar-expels-iranian-attaches-after-lng-facility-strike?traffic_source=rss)",
+                "[Yonhap](https://en.yna.co.kr/view/AEN20260319003151320)",
+                "[Yonhap](https://en.yna.co.kr/view/AEN20260319002251320)",
+                "[Yonhap](https://en.yna.co.kr/view/AEN20260319002300320)",
+                "[SCMP](https://www.scmp.com/business/banking-finance/article/3347050/middle-east-banks-eye-hong-kong-safe-haven-amid-iran-threats-investhk-head-says?utm_source=rss_feed)"
+            ],
+            "general_sentiment": "Negative",
+            "vn_market_impact": "Tiêu cực, gây áp lực lên tỷ giá hối đoái, lạm phát do giá dầu tăng, và tâm lý nhà đầu tư thận trọng. Có thể ảnh hưởng đến chi phí nhập khẩu và sản xuất.",
+            "sector_impact": "Năng lượng (dầu khí) tăng giá, tài chính (ngân hàng, chứng khoán) chịu áp lực, vận tải biển có thể bị ảnh hưởng. Các ngân hàng Trung Đông đang tìm kiếm nơi trú ẩn an toàn như Hồng Kông.",
+            "ticker_impact": "Các cổ phiếu dầu khí (PVS, PVD) có thể hưởng lợi ngắn hạn từ giá dầu tăng. Các cổ phiếu tài chính có thể chịu áp lực."
+        },
+        {
+            "title": "Kinh tế Trung Quốc đối mặt thách thức lớn nhưng công nghệ bùng nổ; Căng thẳng địa chính trị khu vực gia tăng",
+            "explanation": "Nền kinh tế Trung Quốc đối mặt với vấn nạn hơn 2.000 tỷ USD nhưng đồng thời thị trường robot bùng nổ, tăng trưởng gấp 10 lần và giá thuê giảm mạnh, cho thấy sự phát triển mạnh mẽ trong lĩnh vực công nghệ. Trung Quốc cũng đang phát triển hệ thống thanh toán cạnh tranh với Mỹ và công nghệ tiếp nhiên liệu trên không bằng AI. Một nước ASEAN đàm phán mua dầu từ Nga sau khi cấm xuất khẩu nhiên liệu, cho thấy sự dịch chuyển trong chuỗi cung ứng năng lượng. Nga sắp hạ thủy tàu 'chưa từng có' trên hồ sâu nhất hành tinh và máy bay siêu thanh Nga bay gần bờ biển Nhật Bản, làm tăng căng thẳng khu vực. Hàn Quốc và Mỹ kết thúc tập trận quân sự lớn trong bối cảnh Triều Tiên đe dọa.",
+            "sources": [
+                "[CafeF](https://cafef.vn/hon-2000-ty-usd-va-van-nan-chua-tung-co-ma-nen-kinh-te-trung-quoc-sap-doi-mat-18826031907185539.chn)",
+                "[CafeF](https://cafef.vn/thi-truong-robot-trung-quoc-bung-no-tang-truong-gap-10-lan-gia-thue-giam-80-trong-mot-nam-188260318153417175.chn)",
+                "[CafeF](https://cafef.vn/sau-khi-cam-xuat-khau-nhien-lieu-mot-nuoc-asean-dam-phan-mua-dau-tu-nga-188260319072125026.chn)",
+                "[SCMP](https://www.scmp.com/economy/china-economy/article/3347053/how-china-opened-door-creating-direct-rival-us-payment-systems?utm_source=rss_feed)",
+                "[SCMP](https://www.scmp.com/news/china/military/article/3347011/chinas-pla-reveals-ai-assisted-aerial-refuelling-tech-days-after-us-military-tanker-crash?utm_source=rss_feed)",
+                "[SCMP](https://www.scmp.com/week-asia/politics/article/3347058/russian-hypersonic-jets-buzz-japans-coast-thinly-veiled-threat?utm_source=rss_feed)",
+                "[Yonhap](https://en.yna.co.kr/view/AEN20260319003000315)"
+            ],
+            "general_sentiment": "Mixed",
+            "vn_market_impact": "Thách thức kinh tế của Trung Quốc có thể ảnh hưởng đến xuất khẩu của Việt Nam. Sự dịch chuyển nguồn cung năng lượng và căng thẳng khu vực có thể tạo ra cả cơ hội và rủi ro cho các doanh nghiệp Việt Nam, đặc biệt trong lĩnh vực thương mại và quốc phòng.",
+            "sector_impact": "Công nghệ (AI, robot), năng lượng, quốc phòng. Các công ty công nghệ Hàn Quốc như SK Telecom, POSCO Future M cũng đang đẩy mạnh hợp tác về AI, 6G và vật liệu pin tiên tiến.",
+            "ticker_impact": "Không rõ ràng cho từng mã cụ thể tại Việt Nam. Các công ty công nghệ Hàn Quốc như SKT, POSCO Future M có thể hưởng lợi."
+        },
+        {
+            "title": "Tin tức quốc tế khác: Venezuela thay Bộ trưởng Quốc phòng, cựu tướng Mỹ gặp rắc rối",
+            "explanation": "Venezuela thay Bộ trưởng Quốc phòng. Cựu tướng Mỹ gặp rắc rối kép với việc làm thất lạc tài liệu mật và say xỉn ở Ukraine dẫn tới chấn động não. Tình báo Mỹ nói Iran chưa khôi phục chương trình hạt nhân sau xung đột năm 2025. Pakistan tạm dừng không kích Afghanistan để mừng lễ Eid.",
+            "sources": [
+                "[VNExpress](https://vnexpress.net/venezuela-thay-bo-truong-quoc-phong-5052171.html)",
+                "[VNExpress](https://vnexpress.net/tinh-bao-my-noi-iran-chua-khoi-phuc-chuong-trinh-hat-nhan-sau-xung-dot-nam-2025-5052151.html)",
+                "[CafeF](https://cafef.vn/cuu-tuong-my-gap-rac-roi-kep-lam-that-lac-tai-lieu-mat-say-xin-o-ukraine-dan-toi-chan-dong-nao-188260319072344644.chn)",
+                "[NYTimes](https://www.nytimes.com/2026/03/18/world/asia/pakistan-afghanistan-war-drug-rehabilitation-strikes.html)"
+            ],
+            "general_sentiment": "Neutral to Negative",
+            "vn_market_impact": "Ít tác động trực tiếp đến thị trường Việt Nam.",
+            "sector_impact": "Quốc phòng, chính trị.",
+            "ticker_impact": "Không rõ ràng."
+        }
+    ],
+    "business_news": [
+        {
+            "title": "Chính sách kinh tế Việt Nam: Cắt giảm điều kiện kinh doanh, cân não lãi suất - tỷ giá và biến động giá vàng",
+            "explanation": "Bộ Tư Pháp đề xuất cắt giảm 100% các điều kiện đầu tư kinh doanh theo chỉ đạo của Tổng Bí thư, đây là tin vui lớn cho môi trường kinh doanh, hứa hẹn tạo thuận lợi cho doanh nghiệp. Tuy nhiên, thị trường đang 'cân não' về lãi suất và tỷ giá trong bối cảnh giá vàng thế giới giảm kỷ lục và vàng trong nước mất 1 triệu đồng/lượng ngay khi mở cửa. Các cơ quan chức năng Hàn Quốc cũng đang theo dõi chặt chẽ điều kiện ngoại hối trong bối cảnh khủng hoảng Trung Đông và đóng băng lãi suất của Mỹ, điều này cũng có thể ảnh hưởng đến Việt Nam.",
+            "sources": [
+                "[CafeF](https://cafef.vn/tin-vui-quan-triet-chi-dao-cua-tong-bi-thu-bo-tu-phap-de-nghi-cat-giam-100-cac-dieu-kien-dau-tu-kinh-doanh-nhu-sau-188260319084001665.chn)",
+                "[CafeF](https://cafef.vn/can-nao-lai-suat-ti-gia-188260319074441096.chn)",
+                "[CafeF](https://cafef.vn/sang-19-3-gia-vang-the-gioi-giam-ky-luc-vang-trong-nuoc-vua-mo-cua-da-mat-1-trieu-dong-luong-188260319073942136.chn)"
+            ],
+            "general_sentiment": "Mixed",
+            "vn_market_impact": "Tích cực cho doanh nghiệp nhờ cải cách hành chính. Áp lực lên thị trường vàng và tỷ giá có thể ảnh hưởng đến tâm lý nhà đầu tư và chi phí kinh doanh.",
+            "sector_impact": "Toàn bộ nền kinh tế hưởng lợi từ cải cách hành chính. Ngành tài chính, vàng chịu biến động mạnh.",
+            "ticker_impact": "Không rõ ràng cho từng mã cụ thể."
+        },
+        {
+            "title": "Đẩy mạnh đầu tư hạ tầng và phát triển dự án bất động sản, dầu khí tại Việt Nam",
+            "explanation": "Thủ tướng đặc biệt ưu tiên dự án kết nối sân bay Long Thành và Tân Sơn Nhất, cho thấy sự tập trung vào phát triển hạ tầng giao thông trọng điểm. Hà Nội mở quyền khai thác 16 mỏ cát không qua đấu giá để phục vụ các công trình trọng điểm, đảm bảo nguồn cung vật liệu. Hoá chất Đức Giang có dự án bất động sản 4.500 tỷ đồng còn dở dang ở Hà Nội, cho thấy tiềm năng và thách thức trong ngành bất động sản. Một tập đoàn Việt Nam có dự án dầu khí đầu tiên tại Angola với quy mô nghiên cứu lớn, mở rộng hoạt động ra quốc tế.",
+            "sources": [
+                "[CafeF](https://cafef.vn/thu-tuong-dac-biet-uu-tien-du-an-ket-noi-san-bay-long-thanh-va-tan-son-nhat-188260319070533271.chn)",
+                "[CafeF](https://cafef.vn/ha-noi-mo-quyen-khai-thac-16-mo-cat-khong-qua-dau-gia-phuc-vu-cong-trinh-trong-diem-188260319071003173.chn)",
+                "[CafeF](https://cafef.vn/hoa-chat-duc-giang-va-du-an-bat-dong-san-4500-ty-dong-con-do-dang-o-ha-noi-18826031907142165.chn)",
+                "[CafeF](https://cafef.vn/du-an-dau-khí-dau-tien-cua-mot-tap-doan-viet-nam-tai-angola-quy-mo-nghien-cuu-200000-km2-18826031907165794.chn)"
+            ],
+            "general_sentiment": "Positive",
+            "vn_market_impact": "Tích cực cho các doanh nghiệp xây dựng, vật liệu xây dựng, bất động sản liên quan đến hạ tầng. Tạo động lực tăng trưởng cho các ngành này.",
+            "sector_impact": "Xây dựng, vật liệu xây dựng, bất động sản, dầu khí.",
+            "ticker_impact": "HDG (Hà Đô) được khuyến nghị mua, kỳ vọng tăng trưởng. Các mã liên quan đến xây dựng, vật liệu xây dựng (ví dụ: VCG, FCN, KSB, HT1) có thể hưởng lợi. DGC (Hoá chất Đức Giang) với dự án BĐS."
+        },
+        {
+            "title": "Tin tức doanh nghiệp và thị trường cụ thể: Cổ phiếu HDG, sàn tài sản số, Sacombank và giao thương Việt - Trung",
+            "explanation": "Cổ phiếu Hà Đô (HDG) ở đỉnh giá từ đầu năm vẫn được khuyến nghị mua với kỳ vọng tăng hơn 26%. Cuộc đua lập sàn giao dịch tài sản số đang nóng lên, cho thấy sự phát triển của thị trường tài sản kỹ thuật số. Sacombank gây bất ngờ cho cổ đông. Công ty Ngân Lượng của Shark Bình từng 'hái ra tiền' cho thấy tiềm năng của các công ty fintech. Giao thương Việt – Trung tăng tốc, đặt ra thách thức về thanh toán để theo kịp tốc độ hàng hóa. Các công ty như An Phước, Mộc Châu gặp 'vạ lây' vì trùng tên doanh nghiệp, nhấn mạnh tầm quan trọng của việc bảo vệ thương hiệu.",
+            "sources": [
+                "[CafeF](https://cafef.vn/co-phieu-ha-do-hdg-o-dinh-gia-tu-dau-nam-van-duoc-khuyen-nghi-mua-ky-vong-tang-hon-26-nho-dau-188260319073013276.chn)",
+                "[CafeF](https://cafef.vn/cuoc-dua-lap-san-giao-dich-tai-san-so-nong-len-188260319072840466.chn)",
+                "[CafeF](https://cafef.vn/sacombank-khien-co-dong-bat-ngo-188260319072531547.chn)",
+                "[CafeF](https://cafef.vn/giao-thuong-viet-trung-tang-toc-hang-di-nhanh-hon-thanh-toan-lam-sao-theo-kip-188260319084235518.chn)",
+                "[CafeF](https://cafef.vn/an-phuoc-moc-chau-va-nhung-cu-va-lay-vi-trung-ten-doanh-nghiep-188260319073303005.chn)",
+                "[CafeF](https://cafef.vn/cong-ty-ngan-luong-tung-hai-ra-tien-cua-shark-binh-quy-mo-the-nao-188260319072246434.chn)"
+            ],
+            "general_sentiment": "Mixed",
+            "vn_market_impact": "Tích cực cho các cổ phiếu được khuyến nghị. Thị trường tài sản số đang phát triển, tạo cơ hội mới. Thách thức về thanh toán trong giao thương quốc tế cần được giải quyết để thúc đẩy thương mại.",
+            "sector_impact": "Bất động sản, tài chính (ngân hàng, tài sản số, fintech), thương mại điện tử, logistics.",
+            "ticker_impact": "HDG (Hà Đô), STB (Sacombank)."
+        }
+    ]
+}
+```{}

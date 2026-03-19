@@ -1,0 +1,326 @@
+```json
+{
+    "market_summary": {
+        "overall_impact": "Thị trường đang chịu tác động tiêu cực mạnh mẽ từ sự leo thang của xung đột Trung Đông, đặc biệt là các mối đe dọa và tấn công vào cơ sở hạ tầng năng lượng, đẩy giá dầu thế giới vượt 110 USD/thùng và có nguy cơ tăng cao hơn nữa (thậm chí 200 USD/thùng). Điều này gây áp lực lạm phát lớn trên toàn cầu và tại Việt Nam. Đồng VND đang chịu áp lực mất giá đáng kể so với USD (chợ đen vượt 27.400 đồng), buộc Ngân hàng Nhà nước phải tiếp tục hút thanh khoản. Các thị trường chứng khoán châu Á, bao gồm Hàn Quốc, đã phản ứng tiêu cực. Mặc dù Mỹ nới lỏng trừng phạt dầu Venezuela và Việt Nam chủ động tìm kiếm nguồn cung năng lượng, những biện pháp này khó có thể bù đắp hoàn toàn rủi ro từ cuộc khủng hoảng địa chính trị đang diễn ra. | Điểm tác động: -90 | Độ chắc chắn: 95%",
+        "sector_impact": "Các ngành kinh tế phụ thuộc nhiều vào năng lượng nhập khẩu như vận tải, sản xuất, và logistics sẽ chịu ảnh hưởng nặng nề nhất do chi phí đầu vào tăng vọt. Ngành bất động sản tiếp tục đối mặt với khó khăn tài chính và rủi ro trái phiếu. Các ngân hàng sẽ phải quản lý rủi ro tỷ giá và lãi suất trong bối cảnh chính sách tiền tệ có thể thắt chặt. Ngành tiêu dùng cũng sẽ bị ảnh hưởng bởi lạm phát và sức mua giảm sút. | Điểm tác động: -85 | Độ chắc chắn: 90%",
+        "potential_sectors": "Trong bối cảnh tiêu cực chung, các ngành có thể ít bị ảnh hưởng hoặc thậm chí có tiềm năng bao gồm các doanh nghiệp có nguồn nguyên liệu đầu vào ổn định hoặc tự chủ, các ngành xuất khẩu có lợi thế cạnh tranh đặc biệt (nếu nhu cầu toàn cầu không suy giảm quá mạnh), và các doanh nghiệp có khả năng chuyển đổi chi phí sang người tiêu dùng. Tuy nhiên, việc xác định các ngành 'thắng cuộc' là rất khó khăn trong môi trường rủi ro vĩ mô cao như hiện tại. | Điểm tác động: -30 | Độ chắc chắn: 70%",
+        "next_scenarios": {
+            "positive": "Xác suất: 10% | Giải thích: Xung đột Trung Đông hạ nhiệt nhanh chóng thông qua các nỗ lực ngoại giao, các bên đạt được thỏa thuận ngừng bắn và mở lại eo biển Hormuz. Giá dầu giảm mạnh, áp lực lạm phát và tỷ giá được giải tỏa, Ngân hàng Nhà nước có thể nới lỏng chính sách tiền tệ hơn. Các nền kinh tế lớn tránh được suy thoái, duy trì nhu cầu xuất khẩu cho Việt Nam. | Độ chắc chắn: 60%",
+            "negative": "Xác suất: 60% | Giải thích: Xung đột Trung Đông leo thang nghiêm trọng hơn, lan rộng ra các quốc gia khác trong khu vực, hoặc eo biển Hormuz bị phong tỏa hoàn toàn. Giá dầu vượt 150-200 USD/thùng, gây ra lạm phát phi mã toàn cầu và suy thoái kinh tế. Ngân hàng Nhà nước buộc phải tăng lãi suất mạnh để kiềm chế lạm phát và ổn định tỷ giá, gây áp lực lớn lên doanh nghiệp và thị trường chứng khoán. Các chuỗi cung ứng toàn cầu bị gián đoạn nghiêm trọng. | Độ chắc chắn: 95%",
+            "most_likely": "Xác suất: 30% | Giải thích: Xung đột Trung Đông tiếp tục kéo dài ở mức độ hiện tại hoặc leo thang nhẹ, nhưng không dẫn đến phong tỏa hoàn toàn Hormuz. Giá dầu duy trì ở mức cao (110-130 USD/thùng), gây áp lực lạm phát và tỷ giá. Ngân hàng Nhà nước tiếp tục chính sách thận trọng, có thể tăng nhẹ lãi suất hoặc duy trì hút thanh khoản để ổn định vĩ mô. Thị trường chứng khoán Việt Nam chịu áp lực giảm điểm do lo ngại về chi phí năng lượng và lãi suất, nhưng không sụp đổ hoàn toàn. Các doanh nghiệp sẽ phải đối mặt với chi phí đầu vào cao hơn và sức mua giảm sút. | Độ chắc chắn: 85%"
+        }
+    },
+    "world_news": [
+        {
+            "title": "Iran dọa hủy diệt hạ tầng dầu khí vùng Vịnh, ông Trump đáp trả",
+            "explanation": "Iran đe dọa sẽ phá hủy cơ sở hạ tầng dầu khí tại Vùng Vịnh, một động thái có thể gây ra hậu quả nghiêm trọng cho nguồn cung năng lượng toàn cầu. Tổng thống Trump đã đáp trả mạnh mẽ, làm tăng thêm căng thẳng trong khu vực.",
+            "sources": [
+                "[VNExpress](https://vnexpress.net/iran-doa-huy-diet-ha-tang-dau-khi-vung-vinh-ong-trump-dap-tra-5052289.html)"
+            ],
+            "general_sentiment": "**Tiêu Cực** | Điểm tác động: -95 | Độ chắc chắn: 98%",
+            "vn_market_impact": "Gây áp lực cực lớn lên giá xăng dầu nhập khẩu của Việt Nam, đẩy lạm phát tăng cao và làm suy yếu sức mua. Đồng thời, tạo ra sự bất ổn vĩ mô, ảnh hưởng tiêu cực đến tâm lý nhà đầu tư và dòng vốn ngoại.",
+            "sector_impact": "Tiêu cực mạnh đến các ngành vận tải, sản xuất, logistics do chi phí năng lượng tăng vọt. Các ngành tiêu dùng cũng chịu ảnh hưởng do lạm phát.",
+            "ticker_impact": "Các cổ phiếu ngành vận tải (HVN, VJC, GMD), sản xuất (HSG, HPG), và các doanh nghiệp có chi phí năng lượng lớn sẽ chịu áp lực."
+        },
+        {
+            "title": "Iran tập kích cơ sở khí LNG lớn nhất thế giới ở Qatar",
+            "explanation": "Iran đã thực hiện cuộc tấn công vào cơ sở khí LNG lớn nhất thế giới tại Qatar, một hành động leo thang căng thẳng nghiêm trọng, trực tiếp đe dọa nguồn cung năng lượng toàn cầu và gây ra rủi ro lớn cho thị trường khí đốt.",
+            "sources": [
+                "[VNExpress](https://vnexpress.net/iran-tap-kich-co-so-khi-lng-lon-nhat-the-gioi-o-qatar-5052167.html)",
+                "[Al Jazeera](https://www.aljazeera.com/economy/2026/3/19/asias-stock-markets-dive-after-attacks-on-energy-facilities-in-qatar-iran?traffic_source=rss)"
+            ],
+            "general_sentiment": "**Tiêu Cực** | Điểm tác động: -90 | Độ chắc chắn: 95%",
+            "vn_market_impact": "Góp phần đẩy giá năng lượng thế giới lên cao, ảnh hưởng trực tiếp đến chi phí nhập khẩu khí đốt và điện của Việt Nam, gây áp lực lên lạm phát và chi phí sản xuất.",
+            "sector_impact": "Tiêu cực đến các ngành sử dụng khí đốt làm nguyên liệu đầu vào hoặc sản xuất điện.",
+            "ticker_impact": "Các doanh nghiệp sản xuất điện (POW, GEG), hóa chất (DPM, DCM) có thể bị ảnh hưởng bởi giá khí đốt tăng."
+        },
+        {
+            "title": "Lầu Năm Góc 'muốn có thêm 200 tỷ USD' cho xung đột với Iran",
+            "explanation": "Lầu Năm Góc đang đề xuất bổ sung 200 tỷ USD cho ngân sách liên quan đến xung đột với Iran, cho thấy Mỹ đang chuẩn bị cho một cuộc đối đầu kéo dài và tốn kém, làm tăng thêm lo ngại về sự bất ổn địa chính trị toàn cầu.",
+            "sources": [
+                "[VNExpress](https://vnexpress.net/lau-nam-goc-muon-co-them-200-ty-usd-cho-xung-dot-voi-iran-5052183.html)",
+                "[Dân Trí](https://dantri.com.vn/the-gioi/ro-tin-lau-nam-goc-de-xuat-them-200-ty-usd-cho-chien-dich-tai-iran-20260319080012033.htm)"
+            ],
+            "general_sentiment": "**Tiêu Cực** | Điểm tác động: -80 | Độ chắc chắn: 90%",
+            "vn_market_impact": "Tín hiệu về một cuộc xung đột kéo dài sẽ duy trì áp lực lên giá năng lượng và hàng hóa, đồng thời làm tăng rủi ro địa chính trị, khiến nhà đầu tư thận trọng hơn.",
+            "sector_impact": "Không có tác động trực tiếp đến một ngành cụ thể ở Việt Nam, nhưng tạo ra môi trường kinh tế vĩ mô bất ổn chung.",
+            "ticker_impact": "Ảnh hưởng tiêu cực đến tâm lý chung của thị trường, có thể gây bán tháo trên diện rộng."
+        },
+        {
+            "title": "Mỹ tính điều thêm hàng nghìn quân, “lên dây cót” mở rộng chiến dịch Iran",
+            "explanation": "Mỹ đang xem xét điều động thêm hàng nghìn quân và chuẩn bị mở rộng chiến dịch quân sự chống lại Iran, cho thấy sự leo thang đáng kể trong căng thẳng khu vực và khả năng xung đột quy mô lớn hơn.",
+            "sources": [
+                "[Dân Trí](https://dantri.com.vn/the-gioi/my-tinh-dieu-them-hang-nghin-quan-len-day-cot-mo-rong-chien-dich-iran-20260319121112181.htm)"
+            ],
+            "general_sentiment": "**Tiêu Cực** | Điểm tác động: -90 | Độ chắc chắn: 95%",
+            "vn_market_impact": "Tăng cường lo ngại về một cuộc chiến tranh toàn diện, đẩy giá dầu lên cao hơn nữa và gây ra sự bất ổn kinh tế toàn cầu, ảnh hưởng tiêu cực đến tăng trưởng kinh tế Việt Nam.",
+            "sector_impact": "Tác động tiêu cực đến hầu hết các ngành kinh tế do chi phí năng lượng tăng và rủi ro địa chính trị.",
+            "ticker_impact": "Gây áp lực giảm giá lên toàn bộ thị trường chứng khoán."
+        },
+        {
+            "title": "Hệ lụy dây chuyền vượt ngoài dầu mỏ khi Hormuz bị \"thắt nút cổ chai\"",
+            "explanation": "Việc eo biển Hormuz bị \"thắt nút cổ chai\" không chỉ ảnh hưởng đến nguồn cung dầu mỏ mà còn gây ra những hệ lụy dây chuyền nghiêm trọng đến nhiều lĩnh vực kinh tế khác, bao gồm chuỗi cung ứng toàn cầu và giá cả hàng hóa.",
+            "sources": [
+                "[Dân Trí](https://dantri.com.vn/the-gioi/he-luy-day-chuyen-vuot-ngoai-dau-mo-khi-hormuz-bi-that-nut-co-chai-20260319102148993.htm)"
+            ],
+            "general_sentiment": "**Tiêu Cực** | Điểm tác động: -85 | Độ chắc chắn: 92%",
+            "vn_market_impact": "Gây gián đoạn chuỗi cung ứng, tăng chi phí vận chuyển và giá nguyên vật liệu, ảnh hưởng đến khả năng sản xuất và xuất khẩu của Việt Nam.",
+            "sector_impact": "Tiêu cực đến các ngành sản xuất, xuất nhập khẩu, logistics.",
+            "ticker_impact": "Các doanh nghiệp phụ thuộc vào nhập khẩu nguyên liệu hoặc xuất khẩu hàng hóa sẽ chịu ảnh hưởng."
+        },
+        {
+            "title": "Iran tung sức mạnh tổng lực, trút “mưa đạn” tấn công mục tiêu Mỹ - Israel",
+            "explanation": "Iran đã phát động các cuộc tấn công quy mô lớn bằng tên lửa vào các mục tiêu của Mỹ và Israel, thể hiện sự leo thang quân sự trực tiếp và mạnh mẽ trong khu vực, làm tăng nguy cơ xung đột toàn diện.",
+            "sources": [
+                "[Dân Trí](https://dantri.com.vn/the-gioi/iran-tung-suc-manh-tong-luc-trut-mua-dan-tan-cong-muc-tieu-my-israel-20260319075548359.htm)"
+            ],
+            "general_sentiment": "**Tiêu Cực** | Điểm tác động: -95 | Độ chắc chắn: 98%",
+            "vn_market_impact": "Tăng cường sự bất ổn địa chính trị, đẩy giá dầu và vàng lên cao, gây áp lực lên tỷ giá và lạm phát, làm giảm niềm tin của nhà đầu tư.",
+            "sector_impact": "Tiêu cực đến hầu hết các ngành kinh tế do rủi ro chiến tranh và chi phí năng lượng tăng.",
+            "ticker_impact": "Gây bán tháo trên diện rộng, đặc biệt là các cổ phiếu nhạy cảm với rủi ro vĩ mô."
+        },
+        {
+            "title": "Mỹ bất ngờ phá lệ cũ, \"cởi trói\" dầu Venezuela",
+            "explanation": "Mỹ đã nới lỏng các lệnh trừng phạt đối với dầu mỏ của Venezuela, một động thái bất ngờ nhằm tăng nguồn cung dầu toàn cầu và kiềm chế đà tăng giá dầu trong bối cảnh căng thẳng Trung Đông leo thang.",
+            "sources": [
+                "[CafeF](https://cafef.vn/my-bat-ngo-pha-le-cu-coi-troi-dau-venezuela-18826031909533019.chn)",
+                "[Dân Trí](https://dantri.com.vn/the-gioi/my-noi-long-trung-phat-venezuela-de-kim-da-tang-gia-dau-20260319110114489.htm)"
+            ],
+            "general_sentiment": "**Trung Lập** | Điểm tác động: +20 | Độ chắc chắn: 70%",
+            "vn_market_impact": "Có thể giúp giảm bớt một phần áp lực tăng giá dầu, nhưng tác động có thể không đủ lớn để bù đắp hoàn toàn rủi ro từ Trung Đông. Giúp giảm nhẹ áp lực lạm phát và tỷ giá.",
+            "sector_impact": "Tích cực nhẹ cho các ngành tiêu thụ năng lượng nếu giá dầu được kiềm chế.",
+            "ticker_impact": "Giảm bớt một phần áp lực tiêu cực lên các cổ phiếu nhạy cảm với giá dầu."
+        },
+        {
+            "title": "Dầu Nga 'đắt như tôm tươi': Bị quay lưng suốt nhiều tháng, nay được hàng loạt ông lớn ráo riết hỏi mua",
+            "explanation": "Dầu của Nga, từng bị nhiều nước quay lưng, nay lại được các ông lớn ráo riết hỏi mua trong bối cảnh khủng hoảng năng lượng toàn cầu, cho thấy sự thay đổi lớn trong động lực thị trường dầu mỏ.",
+            "sources": [
+                "[CafeF](https://cafef.vn/dau-nga-dat-nhu-tom-tuoi-bi-quay-lung-suot-nhieu-thang-nay-duoc-hang-loat-ong-lon-rao-riet-hoi-mua-18826031814345694.chn)"
+            ],
+            "general_sentiment": "**Trung Lập** | Điểm tác động: +10 | Độ chắc chắn: 65%",
+            "vn_market_impact": "Phản ánh sự tái cấu trúc nguồn cung dầu toàn cầu. Việt Nam có thể tìm kiếm các nguồn cung thay thế, nhưng giá vẫn sẽ cao.",
+            "sector_impact": "Không có tác động trực tiếp đáng kể đến các ngành cụ thể ở Việt Nam, nhưng cho thấy sự linh hoạt trong tìm kiếm nguồn cung.",
+            "ticker_impact": "Không có tác động trực tiếp."
+        },
+        {
+            "title": "Nga 'chơi lớn': Tuyên bố sẽ điều tàu chiến hộ tống đội tàu 'bóng tối', có thể trang bị cả vũ khí cho tàu chở dầu",
+            "explanation": "Nga tuyên bố sẽ điều tàu chiến hộ tống các tàu chở dầu \"bóng tối\" và có thể trang bị vũ khí cho chúng, làm tăng nguy cơ đối đầu quân sự trên biển và gây thêm bất ổn cho tuyến đường vận chuyển năng lượng.",
+            "sources": [
+                "[CafeF](https://cafef.vn/nga-choi-lon-tuyen-bo-se-dieu-tau-chien-ho-tong-doi-tau-bong-toi-co-the-trang-bi-ca-vu-khi-cho-tau-cho-dau-18826031909552274.chn)"
+            ],
+            "general_sentiment": "**Tiêu Cực** | Điểm tác động: -70 | Độ chắc chắn: 85%",
+            "vn_market_impact": "Góp phần làm tăng chi phí vận chuyển hàng hóa và bảo hiểm hàng hải, ảnh hưởng đến hoạt động xuất nhập khẩu của Việt Nam.",
+            "sector_impact": "Tiêu cực đến ngành vận tải biển và logistics.",
+            "ticker_impact": "Các cổ phiếu ngành vận tải biển (HAH, GMD) có thể chịu áp lực."
+        },
+        {
+            "title": "Oil Prices Keep Climbing on Heightened Fears Over Energy Supplies",
+            "explanation": "Giá dầu tiếp tục tăng cao do lo ngại ngày càng tăng về nguồn cung năng lượng, phản ánh sự bất ổn từ cuộc xung đột ở Trung Đông và tác động của nó lên thị trường toàn cầu.",
+            "sources": [
+                "[NYTimes](https://www.nytimes.com/2026/03/19/business/oil-prices-iran-war.html)",
+                "[Al Jazeera](https://www.aljazeera.com/news/2026/3/19/could-oil-hit-200-a-barrel-analysts-no-longer-think-its-far-fetched?traffic_source=rss)"
+            ],
+            "general_sentiment": "**Tiêu Cực** | Điểm tác động: -90 | Độ chắc chắn: 95%",
+            "vn_market_impact": "Trực tiếp gây áp lực lạm phát, tăng chi phí sản xuất và vận chuyển, ảnh hưởng đến lợi nhuận doanh nghiệp và sức mua của người dân.",
+            "sector_impact": "Tiêu cực đến hầu hết các ngành kinh tế, đặc biệt là các ngành phụ thuộc vào năng lượng.",
+            "ticker_impact": "Gây áp lực giảm giá lên toàn bộ thị trường, đặc biệt là các cổ phiếu có biên lợi nhuận mỏng."
+        },
+        {
+            "title": "The Iran War’s Economic Threat to Europe and Asia",
+            "explanation": "Cuộc chiến Iran đang đặt ra mối đe dọa kinh tế nghiêm trọng đối với châu Âu và châu Á, bao gồm chi tiêu tài khóa tăng cao và nợ công, cho thấy tác động lan rộng của xung đột vượt ra ngoài khu vực Trung Đông.",
+            "sources": [
+                "[NYTimes](https://www.nytimes.com/2026/03/19/business/iran-war-fiscal-spending-debt.html)"
+            ],
+            "general_sentiment": "**Tiêu Cực** | Điểm tác động: -85 | Độ chắc chắn: 90%",
+            "vn_market_impact": "Việt Nam, là một phần của châu Á, sẽ chịu ảnh hưởng gián tiếp từ sự suy yếu kinh tế của các đối tác thương mại lớn, ảnh hưởng đến xuất khẩu và đầu tư.",
+            "sector_impact": "Tiêu cực đến các ngành xuất khẩu và các doanh nghiệp có liên kết kinh tế chặt chẽ với châu Âu và châu Á.",
+            "ticker_impact": "Các cổ phiếu xuất khẩu (VHC, ANV, TCM) có thể chịu ảnh hưởng từ nhu cầu giảm."
+        },
+        {
+            "title": "Iranian Missile Attack Leaves 3 Palestinians Dead in West Bank",
+            "explanation": "Một cuộc tấn công tên lửa của Iran đã khiến 3 người Palestine thiệt mạng ở Bờ Tây, cho thấy sự leo thang bạo lực và mở rộng phạm vi xung đột trong khu vực.",
+            "sources": [
+                "[NYTimes](https://www.nytimes.com/2026/03/18/world/middleeast/iran-west-bank-missile-strike.html)",
+                "[Al Jazeera](https://www.aljazeera.com/news/2026/3/19/three-palestinian-women-killed-during-iranian-missile-attack-in-west-bank?traffic_source=rss)"
+            ],
+            "general_sentiment": "**Tiêu Cực** | Điểm tác động: -75 | Độ chắc chắn: 88%",
+            "vn_market_impact": "Góp phần làm tăng rủi ro địa chính trị toàn cầu, duy trì tâm lý thận trọng của nhà đầu tư và có thể ảnh hưởng đến giá vàng như một tài sản trú ẩn an toàn.",
+            "sector_impact": "Không có tác động trực tiếp đến ngành cụ thể, nhưng làm tăng sự bất ổn chung.",
+            "ticker_impact": "Ảnh hưởng đến tâm lý thị trường chung."
+        },
+        {
+            "title": "Prolonged Iran war could have ‘serious’ impact on food prices, says UN’s FAO",
+            "explanation": "Tổ chức Lương thực và Nông nghiệp Liên Hợp Quốc (FAO) cảnh báo rằng cuộc chiến Iran kéo dài có thể gây ra tác động nghiêm trọng đến giá lương thực toàn cầu, làm tăng thêm lo ngại về lạm phát và an ninh lương thực.",
+            "sources": [
+                "[SCMP](https://www.scmp.com/economy/china-economy/article/3347036/prolonged-iran-war-could-have-serious-impact-food-prices-says-uns-fao?utm_source=rss_feed)"
+            ],
+            "general_sentiment": "**Tiêu Cực** | Điểm tác động: -80 | Độ chắc chắn: 90%",
+            "vn_market_impact": "Gây áp lực lạm phát kép (năng lượng và lương thực) lên Việt Nam, ảnh hưởng đến đời sống người dân và chi phí sản xuất của doanh nghiệp.",
+            "sector_impact": "Tiêu cực đến các ngành sản xuất thực phẩm, chăn nuôi, và tiêu dùng.",
+            "ticker_impact": "Các cổ phiếu ngành thực phẩm (MSN, VNM, SAB) có thể chịu áp lực từ chi phí đầu vào tăng."
+        },
+        {
+            "title": "Middle East banks eye Hong Kong as ‘safe haven’ amid Iran threats, InvestHK head says",
+            "explanation": "Các ngân hàng Trung Đông đang xem xét Hồng Kông như một \"nơi trú ẩn an toàn\" giữa các mối đe dọa từ Iran, cho thấy sự dịch chuyển dòng vốn và tìm kiếm sự ổn định tài chính trong bối cảnh bất ổn khu vực.",
+            "sources": [
+                "[SCMP](https://www.scmp.com/business/banking-finance/article/3347050/middle-east-banks-eye-hong-kong-safe-haven-amid-iran-threats-investhk-head-says?utm_source=rss_feed)"
+            ],
+            "general_sentiment": "**Trung Lập** | Điểm tác động: -10 | Độ chắc chắn: 70%",
+            "vn_market_impact": "Mặc dù không trực tiếp ảnh hưởng đến Việt Nam, nhưng nó phản ánh sự dịch chuyển dòng vốn toàn cầu do rủi ro địa chính trị, có thể làm giảm dòng vốn đầu tư vào các thị trường mới nổi như Việt Nam.",
+            "sector_impact": "Có thể ảnh hưởng gián tiếp đến ngành tài chính và bất động sản nếu dòng vốn đầu tư giảm.",
+            "ticker_impact": "Không có tác động trực tiếp đến cổ phiếu cụ thể."
+        },
+        {
+            "title": "PM Anutin takes charge in Thailand as Mideast chaos pressures economy",
+            "explanation": "Thủ tướng Anutin của Thái Lan nhậm chức trong bối cảnh hỗn loạn ở Trung Đông đang gây áp lực lên nền kinh tế nước này, cho thấy tác động kinh tế của xung đột đã lan rộng đến khu vực Đông Nam Á.",
+            "sources": [
+                "[SCMP](https://www.scmp.com/news/asia/southeast-asia/article/3347127/pm-anutin-takes-charge-thailand-mideast-chaos-pressures-economy?utm_source=rss_feed)"
+            ],
+            "general_sentiment": "**Tiêu Cực** | Điểm tác động: -60 | Độ chắc chắn: 80%",
+            "vn_market_impact": "Là một quốc gia trong khu vực, Việt Nam cũng sẽ đối mặt với những áp lực kinh tế tương tự từ cuộc xung đột Trung Đông, bao gồm lạm phát và tăng trưởng chậm lại.",
+            "sector_impact": "Ảnh hưởng chung đến các ngành kinh tế do môi trường kinh doanh khu vực xấu đi.",
+            "ticker_impact": "Gây áp lực lên tâm lý thị trường chung."
+        },
+        {
+            "title": "(2nd LD) Korean won plunges to new 17-yr low against U.S. dollar as Iran crisis persists",
+            "explanation": "Đồng Won Hàn Quốc đã giảm xuống mức thấp nhất trong 17 năm so với đồng USD do cuộc khủng hoảng Iran kéo dài, cho thấy tác động nghiêm trọng của xung đột đến các đồng tiền châu Á và sự bất ổn tài chính khu vực.",
+            "sources": [
+                "[Yonhap](https://en.yna.co.kr/view/AEN20260319002252320)",
+                "[Yonhap](https://en.yna.co.kr/view/AEN20260319002251320)",
+                "[Yonhap](https://en.yna.co.kr/view/AEN20260319002200320)"
+            ],
+            "general_sentiment": "**Tiêu Cực** | Điểm tác động: -85 | Độ chắc chắn: 95%",
+            "vn_market_impact": "Tương tự, đồng VND của Việt Nam cũng đang chịu áp lực mất giá so với USD, điều này sẽ làm tăng chi phí nhập khẩu và nợ nước ngoài, gây áp lực lên lạm phát và chính sách tiền tệ.",
+            "sector_impact": "Tiêu cực đến các doanh nghiệp có nợ vay bằng USD hoặc phụ thuộc vào nhập khẩu.",
+            "ticker_impact": "Các cổ phiếu của doanh nghiệp có nợ ngoại tệ lớn hoặc nhập khẩu nhiều sẽ chịu ảnh hưởng."
+        },
+        {
+            "title": "Lee instructs strict economic readiness posture over concerns about prolonged Mideast war",
+            "explanation": "Tổng thống Hàn Quốc Lee đã chỉ đạo duy trì tư thế sẵn sàng kinh tế nghiêm ngặt do lo ngại về cuộc chiến Trung Đông kéo dài, phản ánh sự chuẩn bị của các quốc gia trong khu vực đối phó với những tác động kinh tế tiêu cực.",
+            "sources": [
+                "[Yonhap](https://en.yna.co.kr/view/AEN20260319006700315)"
+            ],
+            "general_sentiment": "**Tiêu Cực** | Điểm tác động: -70 | Độ chắc chắn: 85%",
+            "vn_market_impact": "Cho thấy các chính phủ trong khu vực đang nghiêm túc đánh giá rủi ro từ xung đột, Việt Nam cũng cần có các biện pháp ứng phó tương tự để bảo vệ nền kinh tế.",
+            "sector_impact": "Không có tác động trực tiếp đến ngành cụ thể, nhưng nhấn mạnh sự cần thiết của các chính sách vĩ mô ổn định.",
+            "ticker_impact": "Ảnh hưởng đến tâm lý thị trường chung."
+        },
+        {
+            "title": "Seoul shares down late Thurs. morning on escalating Mideast crisis, U.S. rate freeze",
+            "explanation": "Thị trường chứng khoán Seoul giảm điểm vào cuối phiên sáng thứ Năm do cuộc khủng hoảng Trung Đông leo thang và quyết định giữ nguyên lãi suất của Mỹ, cho thấy phản ứng tiêu cực của thị trường tài chính khu vực.",
+            "sources": [
+                "[Yonhap](https://en.yna.co.kr/view/AEN20260319004900320)",
+                "[Yonhap](https://en.yna.co.kr/view/AEN20260319002300320)"
+            ],
+            "general_sentiment": "**Tiêu Cực** | Điểm tác động: -80 | Độ chắc chắn: 90%",
+            "vn_market_impact": "Phản ánh tâm lý chung của các thị trường châu Á, cho thấy thị trường chứng khoán Việt Nam cũng có thể chịu áp lực giảm điểm tương tự do các yếu tố vĩ mô tiêu cực.",
+            "sector_impact": "Ảnh hưởng tiêu cực đến hầu hết các ngành trên thị trường chứng khoán.",
+            "ticker_impact": "Gây áp lực giảm giá lên toàn bộ thị trường."
+        }
+    ],
+    "business_news": [
+        {
+            "title": "Giá USD chợ đen vượt 27.400 đồng, Ngân hàng Nhà nước tiếp tục hút thanh khoản VND",
+            "explanation": "Giá USD trên thị trường chợ đen đã vượt mốc 27.400 đồng, trong khi Ngân hàng Nhà nước tiếp tục hút thanh khoản VND, cho thấy áp lực lớn lên tỷ giá hối đoái và nỗ lực của NHNN nhằm ổn định thị trường tiền tệ.",
+            "sources": [
+                "[CafeF](https://cafef.vn/gia-usd-cho-den-vuot-27400-dong-ngan-hang-nha-nuoc-tiep-tuc-hut-thanh-khoan-vnd-188260319112136821.chn)"
+            ],
+            "general_sentiment": "**Tiêu Cực** | Điểm tác động: -80 | Độ chắc chắn: 95%",
+            "vn_market_impact": "Tăng chi phí nhập khẩu, gây áp lực lạm phát, và có thể dẫn đến việc NHNN phải thắt chặt chính sách tiền tệ, ảnh hưởng đến tăng trưởng kinh tế và thị trường chứng khoán.",
+            "sector_impact": "Tiêu cực đến các doanh nghiệp có nợ vay bằng USD hoặc phụ thuộc nhiều vào nhập khẩu nguyên liệu.",
+            "ticker_impact": "Các cổ phiếu của doanh nghiệp nhập khẩu (như các công ty sản xuất, thương mại) và các doanh nghiệp có nợ ngoại tệ lớn sẽ chịu ảnh hưởng."
+        },
+        {
+            "title": "Sáng 19/3: Giá vàng SJC, vàng nhẫn giảm gần 5 triệu đồng/lượng",
+            "explanation": "Giá vàng SJC và vàng nhẫn trong nước đã giảm mạnh gần 5 triệu đồng/lượng, phản ánh sự biến động lớn của thị trường vàng toàn cầu và trong nước.",
+            "sources": [
+                "[CafeF](https://cafef.vn/sang-19-3-gia-vang-the-gioi-giam-ky-luc-vang-trong-nuoc-vua-mo-cua-da-mat-1-trieu-dong-luong-188260319073942136.chn)",
+                "[VNExpress](https://vnexpress.net/gia-vang-moi-nhat-hom-nay-ngay-19-3-5052238.html)",
+                "[Dân Trí](https://dantri.com.vn/kinh-doanh/gia-vang-sjc-giam-manh-46-trieu-dongluong-mat-moc-180-trieu-dong-20260319073521116.htm)"
+            ],
+            "general_sentiment": "**Trung Lập** | Điểm tác động: -10 | Độ chắc chắn: 80%",
+            "vn_market_impact": "Mặc dù giá vàng giảm có thể làm giảm áp lực đầu cơ, nhưng sự biến động mạnh cho thấy rủi ro thị trường cao. Đối với nhà đầu tư, đây là một tín hiệu cần thận trọng.",
+            "sector_impact": "Ảnh hưởng đến các nhà đầu tư cá nhân và các tổ chức kinh doanh vàng.",
+            "ticker_impact": "Không có tác động trực tiếp đến cổ phiếu niêm yết."
+        },
+        {
+            "title": "Thủ tướng lập tức điện đàm với lãnh đạo nước top đầu châu Phi về dầu mỏ, khí đốt, đề nghị hỗ trợ Việt Nam",
+            "explanation": "Thủ tướng Việt Nam đã điện đàm với lãnh đạo Algeria, một quốc gia sản xuất dầu mỏ và khí đốt hàng đầu châu Phi, để đề nghị hỗ trợ nguồn cung cho Việt Nam, thể hiện sự chủ động của chính phủ trong việc đảm bảo an ninh năng lượng quốc gia trước bối cảnh giá dầu thế giới tăng cao.",
+            "sources": [
+                "[CafeF](https://cafef.vn/thu-tuong-lap-tuc-dien-dam-voi-lanh-dao-nuoc-top-dau-chau-phi-ve-dau-mo-khi-dot-de-nghi-ho-tro-viet-nam-18826031912313929.chn)",
+                "[VNExpress](https://vnexpress.net/thu-tuong-de-nghi-algeria-cung-cap-dau-tho-khi-dot-cho-viet-nam-5052254.html)"
+            ],
+            "general_sentiment": "**Tích Cực** | Điểm tác động: +40 | Độ chắc chắn: 85%",
+            "vn_market_impact": "Cho thấy nỗ lực của chính phủ nhằm giảm thiểu tác động tiêu cực của giá năng lượng toàn cầu, có thể giúp ổn định chi phí đầu vào cho doanh nghiệp và giảm áp lực lạm phát trong dài hạn.",
+            "sector_impact": "Tích cực tiềm năng cho các ngành tiêu thụ năng lượng nếu nguồn cung được đảm bảo với giá hợp lý.",
+            "ticker_impact": "Giảm bớt rủi ro cho các doanh nghiệp phụ thuộc vào năng lượng."
+        },
+        {
+            "title": "Rủi ro từ vụ tập kích của Iran vào cơ sở LNG lớn nhất thế giới",
+            "explanation": "Vụ tấn công của Iran vào cơ sở LNG lớn nhất thế giới ở Qatar mang lại rủi ro đáng kể cho nguồn cung khí đốt toàn cầu, ảnh hưởng trực tiếp đến an ninh năng lượng và giá cả trên thị trường quốc tế.",
+            "sources": [
+                "[VNExpress](https://vnexpress.net/rui-ro-tu-vu-tap-kich-cua-iran-vao-co-so-lng-lon-nhat-the-gioi-5052268.html)"
+            ],
+            "general_sentiment": "**Tiêu Cực** | Điểm tác động: -85 | Độ chắc chắn: 92%",
+            "vn_market_impact": "Tăng chi phí nhập khẩu khí đốt và điện cho Việt Nam, gây áp lực lên lạm phát và chi phí sản xuất của các ngành công nghiệp sử dụng khí đốt.",
+            "sector_impact": "Tiêu cực đến các ngành sản xuất điện, hóa chất, và các ngành công nghiệp nặng.",
+            "ticker_impact": "Các cổ phiếu ngành điện (POW, GEG) và hóa chất (DPM, DCM) có thể chịu ảnh hưởng."
+        },
+        {
+            "title": "Giá dầu thế giới tăng cao, vượt 110 USD",
+            "explanation": "Giá dầu thế giới đã tăng vọt, vượt mốc 110 USD/thùng, do căng thẳng leo thang ở Trung Đông và lo ngại về nguồn cung, gây ra áp lực lớn lên nền kinh tế toàn cầu và Việt Nam.",
+            "sources": [
+                "[VNExpress](https://vnexpress.net/gia-dau-the-gioi-tang-cao-vuot-110-usd-5052177.html)"
+            ],
+            "general_sentiment": "**Tiêu Cực** | Điểm tác động: -90 | Độ chắc chắn: 95%",
+            "vn_market_impact": "Trực tiếp gây áp lực lạm phát, tăng chi phí sản xuất và vận chuyển, ảnh hưởng đến lợi nhuận doanh nghiệp và sức mua của người dân.",
+            "sector_impact": "Tiêu cực đến hầu hết các ngành kinh tế, đặc biệt là các ngành phụ thuộc vào năng lượng như vận tải, sản xuất.",
+            "ticker_impact": "Gây áp lực giảm giá lên toàn bộ thị trường, đặc biệt là các cổ phiếu có biên lợi nhuận mỏng."
+        },
+        {
+            "title": "MB tăng lãi suất tiết kiệm, cho phép rút trước hạn vẫn hưởng lãi",
+            "explanation": "Ngân hàng MB đã tăng lãi suất tiết kiệm và đưa ra chính sách cho phép khách hàng rút tiền trước hạn vẫn được hưởng lãi, cho thấy xu hướng tăng lãi suất huy động trong hệ thống ngân hàng và nỗ lực thu hút tiền gửi.",
+            "sources": [
+                "[VNExpress](https://vnexpress.net/mb-tang-lai-suat-tiet-kiem-cho-phep-rut-truoc-han-van-huong-lai-5052340.html)"
+            ],
+            "general_sentiment": "**Trung Lập** | Điểm tác động: -20 | Độ chắc chắn: 75%",
+            "vn_market_impact": "Xu hướng tăng lãi suất huy động có thể dẫn đến tăng lãi suất cho vay, gây áp lực lên chi phí vốn của doanh nghiệp và làm giảm sức hấp dẫn của kênh đầu tư chứng khoán.",
+            "sector_impact": "Tích cực cho ngành ngân hàng về huy động vốn, nhưng tiêu cực cho các ngành khác do chi phí vốn tăng.",
+            "ticker_impact": "Các cổ phiếu ngân hàng (MBB) có thể được hưởng lợi từ việc thu hút tiền gửi, nhưng các doanh nghiệp khác có thể chịu áp lực."
+        },
+        {
+            "title": "Dầu lên 110 USD: Giải mã thế kẹt của Fed và kịch bản lãi suất",
+            "explanation": "Giá dầu tăng lên 110 USD/thùng đang đặt Cục Dự trữ Liên bang Mỹ (Fed) vào thế khó trong việc điều hành chính sách lãi suất, khi phải cân bằng giữa kiềm chế lạm phát và tránh suy thoái kinh tế. Điều này có thể ảnh hưởng đến kịch bản lãi suất toàn cầu.",
+            "sources": [
+                "[Dân Trí](https://dantri.com.vn/kinh-doanh/dau-len-110-usd-giai-ma-the-ket-cua-fed-va-kich-ban-lai-suat-20260319034615942.htm)"
+            ],
+            "general_sentiment": "**Tiêu Cực** | Điểm tác động: -70 | Độ chắc chắn: 88%",
+            "vn_market_impact": "Chính sách của Fed có tác động lớn đến tỷ giá USD/VND và dòng vốn đầu tư toàn cầu. Nếu Fed buộc phải duy trì lãi suất cao hoặc tăng thêm, áp lực lên tỷ giá và lãi suất trong nước sẽ gia tăng.",
+            "sector_impact": "Ảnh hưởng đến các ngành có liên quan đến dòng vốn đầu tư nước ngoài và các doanh nghiệp có nợ vay bằng USD.",
+            "ticker_impact": "Gây áp lực lên các cổ phiếu có vốn hóa lớn và các doanh nghiệp xuất nhập khẩu."
+        },
+        {
+            "title": "Giá vàng SJC giảm mạnh 4,6 triệu đồng/lượng, mất mốc 180 triệu đồng",
+            "explanation": "Giá vàng SJC đã giảm mạnh 4,6 triệu đồng/lượng, mất mốc 180 triệu đồng, cho thấy sự điều chỉnh lớn trên thị trường vàng trong nước sau những biến động gần đây.",
+            "sources": [
+                "[Dân Trí](https://dantri.com.vn/kinh-doanh/gia-vang-sjc-giam-manh-46-trieu-dongluong-mat-moc-180-trieu-dong-20260319073521116.htm)"
+            ],
+            "general_sentiment": "**Trung Lập** | Điểm tác động: -10 | Độ chắc chắn: 80%",
+            "vn_market_impact": "Tương tự như tin CafeF, sự biến động mạnh của giá vàng cho thấy rủi ro thị trường và có thể ảnh hưởng đến tâm lý nhà đầu tư cá nhân.",
+            "sector_impact": "Ảnh hưởng đến các nhà đầu tư cá nhân và các tổ chức kinh doanh vàng.",
+            "ticker_impact": "Không có tác động trực tiếp đến cổ phiếu niêm yết."
+        },
+        {
+            "title": "Nhiều đại gia bất động sản khất nợ trái phiếu",
+            "explanation": "Nhiều doanh nghiệp bất động sản lớn đang phải xin khất nợ trái phiếu, cho thấy những khó khăn tài chính tiếp diễn trong ngành và rủi ro vỡ nợ tiềm ẩn.",
+            "sources": [
+                "[Dân Trí](https://dantri.com.vn/kinh-doanh/nhieu-dai-gia-bat-dong-san-khat-no-trai-phieu-20260319093127643.htm)"
+            ],
+            "general_sentiment": "**Tiêu Cực** | Điểm tác động: -60 | Độ chắc chắn: 85%",
+            "vn_market_impact": "Duy trì tâm lý lo ngại về rủi ro hệ thống trong ngành bất động sản và tài chính, có thể ảnh hưởng đến niềm tin của nhà đầu tư vào thị trường chung.",
+            "sector_impact": "Tiêu cực đến ngành bất động sản và các ngân hàng có liên quan đến cho vay bất động sản.",
+            "ticker_impact": "Các cổ phiếu bất động sản (NVL, PDR, DXG) và ngân hàng (VPB, TCB) có thể chịu áp lực."
+        }
+    ]
+}
+```{}

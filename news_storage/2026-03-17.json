@@ -1,0 +1,102 @@
+```json
+{
+    "market_summary": {
+        "overall_impact": "Thị trường toàn cầu đang đối mặt với rủi ro địa chính trị gia tăng đáng kể từ xung đột Trung Đông, đặc biệt là căng thẳng tại Eo biển Hormuz, đẩy giá năng lượng lên cao và gây lo ngại về chuỗi cung ứng. Trong nước, sự kiện pháp lý liên quan đến lãnh đạo doanh nghiệp lớn (DGC) tạo ra cú sốc tâm lý và rủi ro quản trị doanh nghiệp. Thanh khoản thị trường có thể bị ảnh hưởng bởi động thái hút tiền của NHNN, trong khi các nỗ lực thu hút FDI và đảm bảo an ninh năng lượng mang lại tín hiệu tích cực dài hạn.",
+        "sector_impact": "Các ngành chịu tác động tiêu cực bao gồm Dầu khí (biến động giá mạnh, rủi ro chuỗi cung ứng), Hóa chất (trực tiếp DGC, tâm lý ngành), Hàng không (chi phí nhiên liệu, rủi ro an ninh), Vận tải biển (chi phí, rủi ro tuyến đường), Nông nghiệp/Thủy sản/Phân bón (chi phí vận chuyển, giá đầu vào). Ngành Ngân hàng và Chứng khoán có thể chịu áp lực từ việc hút thanh khoản và lãi suất tăng, nhưng cũng có cơ hội từ việc nới lỏng tín dụng cho các dự án lớn. Bất động sản đối mặt với lãi vay cao nhưng vẫn có các dự án trọng điểm được triển khai. Công nghệ và sản xuất vật liệu mới hưởng lợi từ dòng vốn FDI.",
+        "potential_sectors": "Các ngành tiềm năng bao gồm Năng lượng tái tạo (do nhu cầu đa dạng hóa nguồn năng lượng), Công nghệ cao/Bán dẫn (nhờ đầu tư vào AI và sản xuất chip), và các ngành hưởng lợi từ FDI chất lượng cao (như sản xuất vật liệu pin, công nghiệp phụ trợ)."
+    },
+    "world_news": [
+        {
+            "title": "Xung đột Trung Đông leo thang, đe dọa Eo biển Hormuz và an ninh năng lượng toàn cầu",
+            "explanation": "Chiến sự giữa Mỹ-Israel và Iran tiếp tục căng thẳng, với các cuộc tấn công vào cơ sở năng lượng và việc Israel hạ sát quan chức an ninh cấp cao Iran. Iran đe dọa đóng cửa Eo biển Hormuz, tuyến đường vận chuyển dầu quan trọng, gây áp lực lên giá dầu và an ninh năng lượng. Mỹ kêu gọi đồng minh tham gia liên minh bảo vệ Hormuz nhưng gặp khó khăn.",
+            "sources": [
+                "VNExpress](https://vnexpress.net/no-luc-cua-vung-vinh-nham-thoat-phu-thuoc-nut-co-chai-hormuz-5051259.html)",
+                "Dân Trí](https://dantri.com.vn/the-gioi/iran-ban-loat-vu-khi-sieu-nang-nham-vao-can-cu-trong-yeu-cua-my-israel-20260318060740754.htm)",
+                "NYTimes](https://www.nytimes.com/2026/03/17/world/middleeast/israel-ali-larijani-iran-death.html)"
+            ],
+            "general_sentiment": "Xấu",
+            "vn_market_impact": "Tiêu cực, tăng rủi ro lạm phát do giá dầu, ảnh hưởng chi phí vận tải, tâm lý nhà đầu tư thận trọng.",
+            "sector_impact": "Dầu khí, Vận tải, Hàng không, Sản xuất (chi phí đầu vào)",
+            "ticker_impact": "PLX, GAS, HVN, VJC, HAH, GMD"
+        },
+        {
+            "title": "Thị trường năng lượng toàn cầu biến động mạnh, Việt Nam chủ động tìm kiếm nguồn cung",
+            "explanation": "Giá dầu vượt 103 USD/thùng do xung đột Trung Đông. Một số quốc gia như Thái Lan cân nhắc mua dầu Nga. Việt Nam tích cực điện đàm với các nước sản xuất dầu lớn như Angola, UAE, Qatar và đề nghị Nhật Bản hỗ trợ tiếp cận nguồn dầu dự trữ để đảm bảo an ninh năng lượng trong nước.",
+            "sources": [
+                "Dân Trí](https://dantri.com.vn/kinh-doanh/gia-dau-vuot-103-usd-khhi-hang-loat-co-so-nang-luong-trung-dong-bi-tan-cong-20260318062145901.htm)",
+                "CafeF](https://cafef.vn/thu-tuong-thuc-day-uae-cung-cap-dau-khi-cho-viet-nam-theo-nhu-cau-an-toan-va-dung-han-188260317152819581.chn)",
+                "VNExpress](https://vnexpress.net/viet-nam-muon-tiep-can-nguon-dau-xuat-kho-du-tru-cua-nhat-ban-5051398.html)"
+            ],
+            "general_sentiment": "Trung lập",
+            "vn_market_impact": "Giá dầu cao gây áp lực lạm phát, nhưng nỗ lực đảm bảo nguồn cung giúp ổn định kinh tế vĩ mô.",
+            "sector_impact": "Dầu khí (lọc hóa dầu, phân phối), Vận tải, Sản xuất, Nông nghiệp",
+            "ticker_impact": "BSR, OIL, PLX, GAS"
+        },
+        {
+            "title": "Tổng thống Mỹ hoãn gặp Chủ tịch Trung Quốc vì chiến sự Iran",
+            "explanation": "Tổng thống Mỹ tạm hoãn cuộc gặp thượng đỉnh với Chủ tịch Trung Quốc, dự kiến diễn ra trong khoảng 5-6 tuần tới, do tình hình chiến sự ở Iran.",
+            "sources": [
+                "Dân Trí](https://dantri.com.vn/the-gioi/tong-thong-my-tam-hoan-gap-thuong-dinh-chu-tich-trung-quoc-vi-chien-su-iran-20260318014808635.htm)",
+                "Yonhap](https://en.yna.co.kr/view/AEN20260318000300315)"
+            ],
+            "general_sentiment": "Trung lập",
+            "vn_market_impact": "Gây thêm bất ổn địa chính trị, có thể ảnh hưởng đến tâm lý nhà đầu tư toàn cầu và dòng vốn FDI.",
+            "sector_impact": "Xuất nhập khẩu, Công nghệ, Sản xuất",
+            "ticker_impact": "Không cụ thể"
+        }
+    ],
+    "business_news": [
+        {
+            "title": "Chủ tịch Hóa chất Đức Giang (DGC) bị khởi tố, cổ phiếu giảm sàn",
+            "explanation": "Ông Đào Hữu Huyền, Chủ tịch HĐQT Tập đoàn Hóa chất Đức Giang, cùng một số lãnh đạo khác bị khởi tố liên quan đến các sai phạm trong khai thác quặng và xử lý chất thải. Thông tin này đã khiến cổ phiếu DGC giảm sàn, nhiều công ty chứng khoán cắt margin và gây lo ngại về quản trị doanh nghiệp.",
+            "sources": [
+                "CafeF](https://cafef.vn/khoi-to-chu-tich-duc-giang-dao-huu-huyen-188260317141418777.chn)",
+                "CafeF](https://cafef.vn/hoa-chat-duc-giang-dgc-phat-thong-bao-khan-toi-gan-20000-co-dong-188260317181229631.chn)",
+                "Dân Trí](https://dantri.com.vn/kinh-doanh/hoa-chat-duc-giang-ra-thong-bao-ve-viec-chu-tich-dao-huu-huyen-bi-khoi-to-20260317224038444.htm)"
+            ],
+            "general_sentiment": "Xấu",
+            "vn_market_impact": "Tiêu cực mạnh đến DGC và các cổ phiếu liên quan, gây tâm lý thận trọng cho nhà đầu tư về rủi ro quản trị doanh nghiệp trên thị trường.",
+            "sector_impact": "Hóa chất, Khai khoáng",
+            "ticker_impact": "DGC"
+        },
+        {
+            "title": "Ngân hàng Nhà nước hút thanh khoản VND, các ngân hàng điều chỉnh lãi suất và kế hoạch tín dụng",
+            "explanation": "Ngân hàng Nhà nước tiếp tục hút mạnh thanh khoản VND. Trong khi đó, một số ngân hàng tăng lãi suất tiết kiệm và lãi vay margin. NHNN cũng đề xuất nới trần tín dụng cho các dự án lớn tại Hà Nội, cho thấy sự linh hoạt trong chính sách tiền tệ để hỗ trợ tăng trưởng.",
+            "sources": [
+                "CafeF](https://cafef.vn/ngan-hang-nha-nuoc-hut-manh-thanh-khoan-vnd-188260317111124583.chn)",
+                "CafeF](https://cafef.vn/ngan-hang-nha-nuoc-de-xuat-noi-tran-tin-dung-cho-cac-du-an-lon-tai-ha-noi-188260317142909263.chn)",
+                "Dân Trí](https://dantri.com.vn/kinh-doanh/loat-cong-ty-chung-khoan-tang-lai-vay-margin-len-14nam-do-dau-20260317094841742.htm)"
+            ],
+            "general_sentiment": "Trung lập",
+            "vn_market_impact": "Hút thanh khoản có thể gây áp lực lên lãi suất liên ngân hàng và thị trường chứng khoán. Nới trần tín dụng cho dự án lớn là tín hiệu tích cực cho đầu tư công và bất động sản.",
+            "sector_impact": "Ngân hàng, Chứng khoán, Bất động sản",
+            "ticker_impact": "VCB, CTG, BID, TCB, MBB, SSI, VND, HCM"
+        },
+        {
+            "title": "Ngành hàng không Việt Nam đối mặt nguy cơ lớn từ tháng 4, thiệt hại do UAV",
+            "explanation": "Vietnam Airlines thiệt hại khoảng 5,6 tỷ đồng và ảnh hưởng 9.200 hành khách trong một tuần do UAV. Cục Hàng không kiến nghị các giải pháp khẩn cấp khi các hãng bay Việt đối diện nguy cơ lớn từ tháng 4, có thể liên quan đến chi phí nhiên liệu tăng cao và các vấn đề an ninh hàng không.",
+            "sources": [
+                "CafeF](https://cafef.vn/uav-lam-vietnam-airlines-thiet-hai-khoang-56-ti-dong-trong-1-tuan-anh-huong-9200-hanh-khach-188260317220516274.chn)",
+                "CafeF](https://cafef.vn/tu-thang-4-cac-hang-bay-viet-doi-dien-mot-nguy-co-lon-cuc-hang-khong-kien-nghi-cac-giai-phap-khan-188260317141910098.chn)"
+            ],
+            "general_sentiment": "Xấu",
+            "vn_market_impact": "Tiêu cực đến các hãng hàng không do chi phí tăng và rủi ro hoạt động.",
+            "sector_impact": "Hàng không",
+            "ticker_impact": "HVN, VJC"
+        },
+        {
+            "title": "Việt Nam tiếp tục thu hút FDI chất lượng cao, đẩy mạnh phát triển công nghệ",
+            "explanation": "Cao ủy EU sẽ thăm Việt Nam để thúc đẩy đầu tư. Một đại gia Hàn Quốc rót 6.300 tỷ đồng xây nhà máy vật liệu pin tại Việt Nam. Vingroup tuyển 25.000 nhân sự cho đơn vị thi công hạ tầng. Việt Nam cũng mong muốn cùng Trung Quốc thúc đẩy đầu tư chất lượng cao.",
+            "sources": [
+                "CafeF](https://cafef.vn/dai-gia-han-quoc-rot-ngay-6300-ty-xay-nha-may-vat-lieu-pin-tai-viet-nam-sau-khi-gianh-duoc-hop-dong-lon-nhat-lich-su-voi-mot-hang-o-to-giau-ten-188260317230139551.chn)",
+                "Dân Trí](https://dantri.com.vn/the-gioi/cao-uy-eu-se-tham-viet-nam-de-thuc-day-dau-tu-tu-chau-au-20260317092253243.htm)",
+                "VNExpress](https://vnexpress.net/vingroup-tuyen-25-000-nhan-su-cho-don-vi-thi-cong-ha-tang-5051552.html)"
+            ],
+            "general_sentiment": "Tốt",
+            "vn_market_impact": "Tích cực cho tăng trưởng kinh tế, tạo việc làm, thúc đẩy các ngành công nghiệp phụ trợ và bất động sản khu công nghiệp.",
+            "sector_impact": "Công nghệ, Vật liệu, Bất động sản khu công nghiệp, Xây dựng",
+            "ticker_impact": "VHM, VIC, KBC, IDC, GVR"
+        }
+    ]
+}
+```{}
