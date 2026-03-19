@@ -22,16 +22,15 @@ def get_stock_data(symbol: str, period: str = "max", interval: str = "1d"):
         df_old['time_dt'] = pd.to_datetime(df_old['time'], unit='s', utc=True)
         last_date = df_old['time_dt'].max()
         
-        # Nếu dữ liệu mới nhất chưa quá 12h (tránh gọi API quá nhiều trong ngày)
-        if datetime.now(last_date.tzinfo) - last_date < timedelta(hours=12):
+        # GIẢI QUYẾT YÊU CẦU: Trả ra file data mỗi 15 phút
+        if datetime.now(last_date.tzinfo) - last_date < timedelta(minutes=15):
             return df_old.drop(columns=['time_dt'])
 
         try:
             # 2. TẢI BÙ DỮ LIỆU MỚI
             ticker = yf.Ticker(symbol)
-            # Tải từ ngày cuối cùng của dữ liệu cũ + 1 ngày
-            start_date = (last_date + timedelta(days=1)).strftime('%Y-%m-%d')
-            df_new = ticker.history(start=start_date, interval=interval)
+            # GIẢI QUYẾT YÊU CẦU: Dùng period="1mo" để lấy luôn dữ liệu real-time mới nhất, chống lỗi thiếu ngày do lệch múi giờ
+            df_new = ticker.history(period="1mo", interval=interval)
             
             if df_new.empty:
                 return df_old.drop(columns=['time_dt'])
