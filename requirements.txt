@@ -2,4 +2,7 @@ streamlit
 yfinance
 pandas
 streamlit-lightweight-charts
-supabase
+ta
+feedparser
+replicate
+httpx
